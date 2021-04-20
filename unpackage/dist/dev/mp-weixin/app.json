@@ -1,0 +1,33 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/message/message",
+    "pages/vaccine/vaccine",
+    "pages/person/person",
+    "pages/navTop/navTop",
+    "pages/position/position",
+    "pages/subscribe/subscribe",
+    "pages/scan/scan"
+  ],
+  "subPackages": [],
+  "window": {
+    "navigationStyle": "custom"
+  },
+  "uniStatistics": {
+    "enable": true
+  },
+  "permission": {
+    "scope.userLocation": {
+      "desc": "你的位置信息将用于小程序位置接口的效果展示"
+    }
+  },
+  "usingComponents": {
+    "tops": "/colorui/components/cu-custom",
+    "vaccine": "/pages/vaccine/vaccine",
+    "message": "/pages/message/message",
+    "person": "/pages/person/person",
+    "navtop": "/pages/navTop/navTop",
+    "pagetop": "/pages/navTop/pageTop"
+  },
+  "sitemapLocation": "sitemap.json"
+}

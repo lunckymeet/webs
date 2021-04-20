@@ -1,0 +1,1 @@
+<view><pagetop vue-id="7ac9e6a0-1" bg="#ffd943" title="资讯" titleColor="#fff" isPosition="{{false}}" bind:__l="__l"></pagetop></view>

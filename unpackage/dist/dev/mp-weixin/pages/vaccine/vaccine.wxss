@@ -1,0 +1,228 @@
+
+.wrap {
+	height: 100vh;
+}
+.vaccine-wrap {
+	width: 100%;
+	height: 100%;
+	position: relative;
+}
+.vaccine-wrap>.vaccine-top {
+	width: 100%;
+	background: -webkit-gradient(linear, left top, left bottom, from(#ffd943), color-stop(#ffd943), color-stop(#ffd943), to(rgba(0, 0, 0, 0)));
+	background: -webkit-linear-gradient(top, #ffd943, #ffd943, #ffd943, rgba(0, 0, 0, 0));
+	background: linear-gradient(to bottom, #ffd943, #ffd943, #ffd943, rgba(0, 0, 0, 0));
+}
+.vaccine-wrap > .vaccine-context {
+	position: absolute;
+	top: 180rpx;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	z-index: 9;
+}
+/* 疫情，操作条，步骤条，资讯公共样式 */
+.vaccine-wrap > .vaccine-context > .vaccine-epidemic,
+.vaccine-wrap > .vaccine-context > .vaccine-operation,
+.vaccine-wrap > .vaccine-context > .vaccine-steps,
+.vaccine-wrap > .vaccine-context > .vaccine-info{
+	width: 94%;
+	margin: 5% auto;
+	background-color: #fff;
+	-webkit-border-radius: 20rpx;
+	        border-radius: 20rpx;
+	-webkit-box-sizing: border-box;
+	        box-sizing: border-box;
+	overflow: hidden;
+	padding: 2% 2% 0 2%;
+	-webkit-box-shadow: 0 0 20rpx #ddd;
+	        box-shadow: 0 0 20rpx #ddd;
+}
+/* 疫情样式 */
+.vaccine-wrap > .vaccine-context > .vaccine-epidemic {
+	height: 500rpx;
+	margin: 0 auto;
+}
+.vaccine-wrap > .vaccine-context > .vaccine-epidemic > .epidemic {
+	width: 100%;
+	height: 100%;
+}
+.vaccine-wrap > .vaccine-context > .vaccine-epidemic > .epidemic .title {
+	width: 100%;
+	height: 80rpx;
+	line-height: 60rpx;
+	text-align: center;
+	font-size: 32rpx;
+	font-weight: bold;
+	color: #3c3f48;
+	/* color: #fff; */
+	background-color: rgba(0, 0, 0, 0);
+}
+.vaccine-wrap > .vaccine-context > .vaccine-epidemic > .epidemic .title > .date {
+	width: 100%;
+	height: auto;
+	font-size: 24rpx;
+	text-align: center;
+	font-weight: normal;
+}
+.vaccine-wrap > .vaccine-context > .vaccine-epidemic > .epidemic .data-list {
+	width: 100%;
+	height: 390rpx;
+	background-color: rgba(0, 0, 0, 0);
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: flex;
+	-webkit-box-orient: horizontal;
+	-webkit-box-direction: normal;
+	-webkit-flex-flow: row wrap;
+	        flex-flow: row wrap;
+	padding: 5%;
+	-webkit-box-sizing: border-box;
+	        box-sizing: border-box;
+}
+.vaccine-wrap > .vaccine-context > .vaccine-epidemic > .epidemic .data-list .data {
+	width: 50%;
+	height: 45%;
+	-webkit-box-flex: 1;
+	-webkit-flex: 1 1 auto;
+	        flex: 1 1 auto;
+	text-align: center;
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: flex;
+	-webkit-box-pack: center;
+	-webkit-justify-content: center;
+	        justify-content: center;
+	-webkit-box-align: center;
+	-webkit-align-items: center;
+	        align-items: center;
+}
+.vaccine-wrap > .vaccine-context > .vaccine-epidemic > .epidemic .data-list .data .data-title {
+	font-weight: bolder;
+}
+.vaccine-wrap > .vaccine-context > .vaccine-epidemic > .epidemic .data-list .data .text {
+	margin: 6rpx 0;
+}
+.vaccine-wrap > .vaccine-context > .vaccine-epidemic > .epidemic .data-list .data:nth-child(2n+1){
+	border-right: 1px solid #ddd;
+	margin-bottom: 5%;
+}
+.vaccine-wrap > .vaccine-context > .vaccine-epidemic > .epidemic .data-list .data:nth-child(1),
+.vaccine-wrap > .vaccine-context > .vaccine-epidemic > .epidemic .data-list .data:nth-child(2) {
+	/* margin-bottom: 5%;
+	border-bottom: 1px solid #ddd; */
+}
+.vaccine-wrap > .vaccine-context > .vaccine-epidemic > .epidemic .data-list .data:nth-child(1) .data-num,
+.vaccine-wrap > .vaccine-context > .vaccine-epidemic > .epidemic .data-list .data:nth-child(1) .data-change{
+	color: #a31d13;
+}
+.vaccine-wrap > .vaccine-context > .vaccine-epidemic > .epidemic .data-list .data:nth-child(2) .data-num,
+.vaccine-wrap > .vaccine-context > .vaccine-epidemic > .epidemic .data-list .data:nth-child(2) .data-change{
+	color: #34aa70;
+}
+.vaccine-wrap > .vaccine-context > .vaccine-epidemic > .epidemic .data-list .data:nth-child(3) .data-num,
+.vaccine-wrap > .vaccine-context > .vaccine-epidemic > .epidemic .data-list .data:nth-child(3) .data-change{
+	color: #333;
+}
+.vaccine-wrap > .vaccine-context > .vaccine-epidemic > .epidemic .data-list .data:nth-child(4) .data-num,
+.vaccine-wrap > .vaccine-context > .vaccine-epidemic > .epidemic .data-list .data:nth-child(4) .data-change{
+	color: #e44a3d;
+}
+/* 操作条 */
+.vaccine-wrap > .vaccine-context > .vaccine-operation {
+	height: 200rpx;
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: flex;
+	-webkit-box-orient: horizontal;
+	-webkit-box-direction: normal;
+	-webkit-flex-flow: row wrap;
+	        flex-flow: row wrap;
+}
+.vaccine-wrap > .vaccine-context > .vaccine-operation > .operation {
+	-webkit-box-flex: 1;
+	-webkit-flex: 1 1 auto;
+	        flex: 1 1 auto;
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: flex;
+	-webkit-box-pack: center;
+	-webkit-justify-content: center;
+	        justify-content: center;
+	-webkit-box-align: center;
+	-webkit-align-items: center;
+	        align-items: center;
+	text-align: center;
+}
+/* 步骤条 */
+.vaccine-wrap > .vaccine-context > .vaccine-steps {
+	height: 170rpx;
+	padding: 2% 0;
+	-webkit-box-pack: center;
+	-webkit-justify-content: center;
+	        justify-content: center;
+	-webkit-box-align: center;
+	-webkit-align-items: center;
+	        align-items: center;
+	text-align: center;
+}
+.vaccine-wrap > .vaccine-context > .vaccine-steps > .steps {
+	margin: auto;
+}
+/* 资讯 */
+.vaccine-wrap > .vaccine-context > .vaccine-info {
+	height: auto;
+	margin-bottom: 140rpx;
+	padding: 4%;
+}
+.vaccine-wrap > .vaccine-context > .vaccine-info > .info {
+	width: 100%;
+	height: 140rpx;
+	text-align: left;
+	margin-bottom: 40rpx;
+}
+.vaccine-wrap > .vaccine-context > .vaccine-info > .info:last-child{
+	margin-bottom: 0rpx;
+}
+.vaccine-wrap > .vaccine-context > .vaccine-info > .info > .title {
+	width: 100%;
+	height: 35%;
+	font-size: 34rpx;
+	color: #3C3F48;
+	font-weight: 500;
+}
+.vaccine-wrap > .vaccine-context > .vaccine-info > .info > .desc {
+	width: 100%;
+	height: 40%;
+	font-size: 26rpx;
+	color: #777;
+}
+.vaccine-wrap > .vaccine-context > .vaccine-info > .info > .introduce {
+	width: 100%;
+	height: 10%;
+	font-size: 24rpx;
+	color: #aaa;
+	-webkit-box-pack: center;
+	-webkit-justify-content: center;
+	        justify-content: center;
+	-webkit-box-align: center;
+	-webkit-align-items: center;
+	        align-items: center;
+	text-align: center;
+}
+.vaccine-wrap > .vaccine-context > .vaccine-info > .info > .introduce > .date {
+	width: 25%;
+	height: 100%;
+	float: left;
+}
+.vaccine-wrap > .vaccine-context > .vaccine-info > .info > .introduce > .from {
+	width: 50%;
+	height: 100%;
+	float: left;
+}
+.vaccine-wrap > .vaccine-context > .vaccine-info > .info > .introduce > .eye {
+	width: 25%;
+	height: 100%;
+	float: right;
+}
+

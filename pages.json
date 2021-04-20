@@ -1,0 +1,96 @@
+{
+	"pages": [ //pages数组中第一项表示应用启动页，参考：https://uniapp.dcloud.io/collocation/pages
+		{
+			"path": "pages/index/index",
+			"style": {
+				"navigationBarTitleText": "uni-app",
+				"usingComponents": {
+					"van-button": "/wxcomponents/vant/dist/button/index",
+					"van-icon": "/wxcomponents/vant/dist/icon/index",
+					"van-transition": "/wxcomponents/vant/dist/transition/index"
+				}
+			}
+		}
+	    ,{
+            "path" : "pages/message/message",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "",
+                "enablePullDownRefresh": false,
+				"usingComponents": {
+					
+				}
+            }
+            
+        }
+        ,{
+            "path" : "pages/vaccine/vaccine",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "",
+                "enablePullDownRefresh": false,
+				"usingComponents": {
+					"van-icon": "/wxcomponents/vant/dist/icon/index",
+					"van-transition": "/wxcomponents/vant/dist/transition/index"
+				}
+            }
+            
+        }
+        ,{
+            "path" : "pages/person/person",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "",
+                "enablePullDownRefresh": false
+            }
+            
+        }
+        ,{
+            "path" : "pages/navTop/navTop",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "",
+                "enablePullDownRefresh": false,
+				"usingComponents": {
+					"van-icon": "/wxcomponents/vant/dist/icon/index"
+				}
+            }
+            
+        }
+        ,{
+            "path" : "pages/position/position",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "",
+                "enablePullDownRefresh": false
+            }
+            
+        }
+        ,{
+            "path" : "pages/subscribe/subscribe",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "",
+                "enablePullDownRefresh": false,
+				"usingComponents": {
+					"van-field": "/wxcomponents/vant/dist/field/index",
+					"van-dialog": "/wxcomponents/vant/dist/dialog/index",
+					"van-picker": "/wxcomponents/vant/dist/picker/index"
+				}
+            }
+            
+        }
+        ,{
+            "path" : "pages/scan/scan",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "",
+                "enablePullDownRefresh": false
+            }
+            
+        }
+    ],
+	"globalStyle": {
+		"navigationStyle": "custom"
+	}
+}
