@@ -335,7 +335,7 @@
 			this.$data.navHeight = app.globalData.navHeight;
 			this.$data.topContextHeight = (this.$data.topHeight / app.globalData.rpxRatio) - app.globalData.navHeight;
 			
-			
+			/*
 			uni.request({
 				url: "https://interface.sina.cn/news/wap/fymap2020_data.d.json",
 				method: "GET",
@@ -348,6 +348,7 @@
 					console.log("获取到疫情数据失败", e)
 				}
 			})
+			*/
 		}
 	}
 </script>

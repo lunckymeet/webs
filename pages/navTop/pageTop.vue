@@ -81,7 +81,7 @@
 				});
 				myAmapFun.getPoiAround({
 					success: function(data) {
-						thisData.city = data.poisData[0].cityname;
+						thisData.city = appData.city = data.poisData[0].cityname;
 					},
 					fail: function(info) {
 						//失败回调

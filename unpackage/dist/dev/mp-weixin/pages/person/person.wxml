@@ -1,1 +1,0 @@
-<view><pagetop vue-id="e8437cc0-1" bg="#ffd943" title="个人中心" titleColor="#fff" isPosition="{{false}}" bind:__l="__l"></pagetop></view>

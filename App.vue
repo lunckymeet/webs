@@ -11,7 +11,7 @@
 			screenHeight: 0, // 屏幕高度
 			areaKey: "1e279352f502efae4ebfe4e90061042f", // 高德KEY
 			userInfo: null, // 用户信息
-			
+			city: "", // 当前城市
 		},
 		methods: {
 			
@@ -61,15 +61,16 @@
 			
 			
 			// 定时获取AccessToken
-			
+			/*
 			that.getAccessToken();
 			const accessTokenTimer = setInterval(e => {
 				that.getAccessToken();
 			}, 7200000);
-			
+			*/
 			
 			
 			// 登录获取code，向后台发送请求换取openid
+			/*
 			uni.login({
 				success: (e) => {
 					
@@ -88,7 +89,7 @@
 					})
 				}
 			});
-			
+			*/
 			
 			/* 
 				获取用户授权

@@ -12,6 +12,23 @@
 			}
 		}
 	    ,{
+		    "path" : "pages/subscribe/subscribe",
+		    "style" :                                                                                    
+		    {
+		        "navigationBarTitleText": "",
+		        "enablePullDownRefresh": false,
+				"usingComponents": {
+					"van-field": "/wxcomponents/vant/dist/field/index",
+					"van-dialog": "/wxcomponents/vant/dist/dialog/index",
+					"van-picker": "/wxcomponents/vant/dist/picker/index",
+					"van-tab": "/wxcomponents/vant/dist/tab/index",
+					"van-tabs": "/wxcomponents/vant/dist/tabs/index",
+					"van-datetime-picker": "/wxcomponents/vant/dist/datetime-picker/index"
+				}
+		    }
+		    
+		}
+		,{
             "path" : "pages/message/message",
             "style" :                                                                                    
             {
@@ -63,20 +80,6 @@
             {
                 "navigationBarTitleText": "",
                 "enablePullDownRefresh": false
-            }
-            
-        }
-        ,{
-            "path" : "pages/subscribe/subscribe",
-            "style" :                                                                                    
-            {
-                "navigationBarTitleText": "",
-                "enablePullDownRefresh": false,
-				"usingComponents": {
-					"van-field": "/wxcomponents/vant/dist/field/index",
-					"van-dialog": "/wxcomponents/vant/dist/dialog/index",
-					"van-picker": "/wxcomponents/vant/dist/picker/index"
-				}
             }
             
         }

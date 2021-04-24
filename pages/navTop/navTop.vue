@@ -52,7 +52,6 @@
 				type: String,
 				default: ""
 			}
-
 		},
 		methods: {
 			back: function(e) {
