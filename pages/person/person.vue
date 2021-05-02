@@ -13,8 +13,8 @@
 					/>
 				</view>
 				<view class="person-img-right">
-					<view class="person-name">姓名：{{name}}</view>
-					<view class="person-age">年龄：{{age}}岁</view>
+					<view class="person-name">{{name}}</view>
+					<view class="person-age">{{age}}岁</view>
 					<view class="updateMessage" @click="skip($event)" data-path="/pages/updateMessage/updateMessage">修改个人资料</view>
 				</view>
 			</view>
@@ -73,7 +73,7 @@
 	}
 </script>
 
-<style>
+<style scoped>
 	.person-img{
 		position: absolute;
 		top: 130rpx;
@@ -83,7 +83,7 @@
 	
 	.person-img > .person-top ,
 	.person-img > .person-botton{
-		width: 94%;
+		width: 100%;
 		margin: 5% auto;
 		background-color: #fff;
 		border-radius: 20rpx;

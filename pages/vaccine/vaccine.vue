@@ -353,7 +353,7 @@
 	}
 </script>
 
-<style>
+<style scoped>
 	.wrap {
 		height: 100vh;
 	}

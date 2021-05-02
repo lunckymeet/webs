@@ -5411,21 +5411,21 @@ scroll-view.cu-steps .cu-item {
 .van-hairline--surround:after{border-width:1px}
 
 
-.wrap {
+.wrap.data-v-0804e272 {
 	height: 100vh;
 }
-.vaccine-wrap {
+.vaccine-wrap.data-v-0804e272 {
 	width: 100%;
 	height: 100%;
 	position: relative;
 }
-.vaccine-wrap>.vaccine-top {
+.vaccine-wrap>.vaccine-top.data-v-0804e272 {
 	width: 100%;
 	background: -webkit-gradient(linear, left top, left bottom, from(#ffd943), color-stop(#ffd943), color-stop(#ffd943), to(rgba(0, 0, 0, 0)));
 	background: -webkit-linear-gradient(top, #ffd943, #ffd943, #ffd943, rgba(0, 0, 0, 0));
 	background: linear-gradient(to bottom, #ffd943, #ffd943, #ffd943, rgba(0, 0, 0, 0));
 }
-.vaccine-wrap > .vaccine-context {
+.vaccine-wrap > .vaccine-context.data-v-0804e272 {
 	position: absolute;
 	top: 180rpx;
 	left: 0;
@@ -5434,10 +5434,10 @@ scroll-view.cu-steps .cu-item {
 	z-index: 9;
 }
 /* 疫情，操作条，步骤条，资讯公共样式 */
-.vaccine-wrap > .vaccine-context > .vaccine-epidemic,
-.vaccine-wrap > .vaccine-context > .vaccine-operation,
-.vaccine-wrap > .vaccine-context > .vaccine-steps,
-.vaccine-wrap > .vaccine-context > .vaccine-info{
+.vaccine-wrap > .vaccine-context > .vaccine-epidemic.data-v-0804e272,
+.vaccine-wrap > .vaccine-context > .vaccine-operation.data-v-0804e272,
+.vaccine-wrap > .vaccine-context > .vaccine-steps.data-v-0804e272,
+.vaccine-wrap > .vaccine-context > .vaccine-info.data-v-0804e272{
 	width: 94%;
 	margin: 5% auto;
 	background-color: #fff;
@@ -5451,15 +5451,15 @@ scroll-view.cu-steps .cu-item {
 	        box-shadow: 0 0 20rpx #ddd;
 }
 /* 疫情样式 */
-.vaccine-wrap > .vaccine-context > .vaccine-epidemic {
+.vaccine-wrap > .vaccine-context > .vaccine-epidemic.data-v-0804e272 {
 	height: 500rpx;
 	margin: 0 auto;
 }
-.vaccine-wrap > .vaccine-context > .vaccine-epidemic > .epidemic {
+.vaccine-wrap > .vaccine-context > .vaccine-epidemic > .epidemic.data-v-0804e272 {
 	width: 100%;
 	height: 100%;
 }
-.vaccine-wrap > .vaccine-context > .vaccine-epidemic > .epidemic .title {
+.vaccine-wrap > .vaccine-context > .vaccine-epidemic > .epidemic .title.data-v-0804e272 {
 	width: 100%;
 	height: 80rpx;
 	line-height: 60rpx;
@@ -5470,14 +5470,14 @@ scroll-view.cu-steps .cu-item {
 	/* color: #fff; */
 	background-color: rgba(0, 0, 0, 0);
 }
-.vaccine-wrap > .vaccine-context > .vaccine-epidemic > .epidemic .title > .date {
+.vaccine-wrap > .vaccine-context > .vaccine-epidemic > .epidemic .title > .date.data-v-0804e272 {
 	width: 100%;
 	height: auto;
 	font-size: 24rpx;
 	text-align: center;
 	font-weight: normal;
 }
-.vaccine-wrap > .vaccine-context > .vaccine-epidemic > .epidemic .data-list {
+.vaccine-wrap > .vaccine-context > .vaccine-epidemic > .epidemic .data-list.data-v-0804e272 {
 	width: 100%;
 	height: 390rpx;
 	background-color: rgba(0, 0, 0, 0);
@@ -5492,7 +5492,7 @@ scroll-view.cu-steps .cu-item {
 	-webkit-box-sizing: border-box;
 	        box-sizing: border-box;
 }
-.vaccine-wrap > .vaccine-context > .vaccine-epidemic > .epidemic .data-list .data {
+.vaccine-wrap > .vaccine-context > .vaccine-epidemic > .epidemic .data-list .data.data-v-0804e272 {
 	width: 50%;
 	height: 45%;
 	-webkit-box-flex: 1;
@@ -5509,39 +5509,39 @@ scroll-view.cu-steps .cu-item {
 	-webkit-align-items: center;
 	        align-items: center;
 }
-.vaccine-wrap > .vaccine-context > .vaccine-epidemic > .epidemic .data-list .data .data-title {
+.vaccine-wrap > .vaccine-context > .vaccine-epidemic > .epidemic .data-list .data .data-title.data-v-0804e272 {
 	font-weight: bolder;
 }
-.vaccine-wrap > .vaccine-context > .vaccine-epidemic > .epidemic .data-list .data .text {
+.vaccine-wrap > .vaccine-context > .vaccine-epidemic > .epidemic .data-list .data .text.data-v-0804e272 {
 	margin: 6rpx 0;
 }
-.vaccine-wrap > .vaccine-context > .vaccine-epidemic > .epidemic .data-list .data:nth-child(2n+1){
+.vaccine-wrap > .vaccine-context > .vaccine-epidemic > .epidemic .data-list .data.data-v-0804e272:nth-child(2n+1){
 	border-right: 1px solid #ddd;
 	margin-bottom: 5%;
 }
-.vaccine-wrap > .vaccine-context > .vaccine-epidemic > .epidemic .data-list .data:nth-child(1),
-.vaccine-wrap > .vaccine-context > .vaccine-epidemic > .epidemic .data-list .data:nth-child(2) {
+.vaccine-wrap > .vaccine-context > .vaccine-epidemic > .epidemic .data-list .data.data-v-0804e272:nth-child(1),
+.vaccine-wrap > .vaccine-context > .vaccine-epidemic > .epidemic .data-list .data.data-v-0804e272:nth-child(2) {
 	/* margin-bottom: 5%;
 	border-bottom: 1px solid #ddd; */
 }
-.vaccine-wrap > .vaccine-context > .vaccine-epidemic > .epidemic .data-list .data:nth-child(1) .data-num,
-.vaccine-wrap > .vaccine-context > .vaccine-epidemic > .epidemic .data-list .data:nth-child(1) .data-change{
+.vaccine-wrap > .vaccine-context > .vaccine-epidemic > .epidemic .data-list .data:nth-child(1) .data-num.data-v-0804e272,
+.vaccine-wrap > .vaccine-context > .vaccine-epidemic > .epidemic .data-list .data:nth-child(1) .data-change.data-v-0804e272{
 	color: #a31d13;
 }
-.vaccine-wrap > .vaccine-context > .vaccine-epidemic > .epidemic .data-list .data:nth-child(2) .data-num,
-.vaccine-wrap > .vaccine-context > .vaccine-epidemic > .epidemic .data-list .data:nth-child(2) .data-change{
+.vaccine-wrap > .vaccine-context > .vaccine-epidemic > .epidemic .data-list .data:nth-child(2) .data-num.data-v-0804e272,
+.vaccine-wrap > .vaccine-context > .vaccine-epidemic > .epidemic .data-list .data:nth-child(2) .data-change.data-v-0804e272{
 	color: #34aa70;
 }
-.vaccine-wrap > .vaccine-context > .vaccine-epidemic > .epidemic .data-list .data:nth-child(3) .data-num,
-.vaccine-wrap > .vaccine-context > .vaccine-epidemic > .epidemic .data-list .data:nth-child(3) .data-change{
+.vaccine-wrap > .vaccine-context > .vaccine-epidemic > .epidemic .data-list .data:nth-child(3) .data-num.data-v-0804e272,
+.vaccine-wrap > .vaccine-context > .vaccine-epidemic > .epidemic .data-list .data:nth-child(3) .data-change.data-v-0804e272{
 	color: #333;
 }
-.vaccine-wrap > .vaccine-context > .vaccine-epidemic > .epidemic .data-list .data:nth-child(4) .data-num,
-.vaccine-wrap > .vaccine-context > .vaccine-epidemic > .epidemic .data-list .data:nth-child(4) .data-change{
+.vaccine-wrap > .vaccine-context > .vaccine-epidemic > .epidemic .data-list .data:nth-child(4) .data-num.data-v-0804e272,
+.vaccine-wrap > .vaccine-context > .vaccine-epidemic > .epidemic .data-list .data:nth-child(4) .data-change.data-v-0804e272{
 	color: #e44a3d;
 }
 /* 操作条 */
-.vaccine-wrap > .vaccine-context > .vaccine-operation {
+.vaccine-wrap > .vaccine-context > .vaccine-operation.data-v-0804e272 {
 	height: 200rpx;
 	display: -webkit-box;
 	display: -webkit-flex;
@@ -5551,7 +5551,7 @@ scroll-view.cu-steps .cu-item {
 	-webkit-flex-flow: row wrap;
 	        flex-flow: row wrap;
 }
-.vaccine-wrap > .vaccine-context > .vaccine-operation > .operation {
+.vaccine-wrap > .vaccine-context > .vaccine-operation > .operation.data-v-0804e272 {
 	-webkit-box-flex: 1;
 	-webkit-flex: 1 1 auto;
 	        flex: 1 1 auto;
@@ -5567,7 +5567,7 @@ scroll-view.cu-steps .cu-item {
 	text-align: center;
 }
 /* 步骤条 */
-.vaccine-wrap > .vaccine-context > .vaccine-steps {
+.vaccine-wrap > .vaccine-context > .vaccine-steps.data-v-0804e272 {
 	height: 170rpx;
 	padding: 2% 0;
 	-webkit-box-pack: center;
@@ -5578,38 +5578,38 @@ scroll-view.cu-steps .cu-item {
 	        align-items: center;
 	text-align: center;
 }
-.vaccine-wrap > .vaccine-context > .vaccine-steps > .steps {
+.vaccine-wrap > .vaccine-context > .vaccine-steps > .steps.data-v-0804e272 {
 	margin: auto;
 }
 /* 资讯 */
-.vaccine-wrap > .vaccine-context > .vaccine-info {
+.vaccine-wrap > .vaccine-context > .vaccine-info.data-v-0804e272 {
 	height: auto;
 	margin-bottom: 140rpx;
 	padding: 4%;
 }
-.vaccine-wrap > .vaccine-context > .vaccine-info > .info {
+.vaccine-wrap > .vaccine-context > .vaccine-info > .info.data-v-0804e272 {
 	width: 100%;
 	height: 140rpx;
 	text-align: left;
 	margin-bottom: 40rpx;
 }
-.vaccine-wrap > .vaccine-context > .vaccine-info > .info:last-child{
+.vaccine-wrap > .vaccine-context > .vaccine-info > .info.data-v-0804e272:last-child{
 	margin-bottom: 0rpx;
 }
-.vaccine-wrap > .vaccine-context > .vaccine-info > .info > .title {
+.vaccine-wrap > .vaccine-context > .vaccine-info > .info > .title.data-v-0804e272 {
 	width: 100%;
 	height: 35%;
 	font-size: 34rpx;
 	color: #3C3F48;
 	font-weight: 500;
 }
-.vaccine-wrap > .vaccine-context > .vaccine-info > .info > .desc {
+.vaccine-wrap > .vaccine-context > .vaccine-info > .info > .desc.data-v-0804e272 {
 	width: 100%;
 	height: 40%;
 	font-size: 26rpx;
 	color: #777;
 }
-.vaccine-wrap > .vaccine-context > .vaccine-info > .info > .introduce {
+.vaccine-wrap > .vaccine-context > .vaccine-info > .info > .introduce.data-v-0804e272 {
 	width: 100%;
 	height: 10%;
 	font-size: 24rpx;
@@ -5622,32 +5622,34 @@ scroll-view.cu-steps .cu-item {
 	        align-items: center;
 	text-align: center;
 }
-.vaccine-wrap > .vaccine-context > .vaccine-info > .info > .introduce > .date {
+.vaccine-wrap > .vaccine-context > .vaccine-info > .info > .introduce > .date.data-v-0804e272 {
 	width: 25%;
 	height: 100%;
 	float: left;
 }
-.vaccine-wrap > .vaccine-context > .vaccine-info > .info > .introduce > .from {
+.vaccine-wrap > .vaccine-context > .vaccine-info > .info > .introduce > .from.data-v-0804e272 {
 	width: 50%;
 	height: 100%;
 	float: left;
 }
-.vaccine-wrap > .vaccine-context > .vaccine-info > .info > .introduce > .eye {
+.vaccine-wrap > .vaccine-context > .vaccine-info > .info > .introduce > .eye.data-v-0804e272 {
 	width: 25%;
 	height: 100%;
 	float: right;
 }
 
 
-.warp{
+.wrap.data-v-a91f51d4{
 	height: 100vh;
 }
-
-/* 公共样式 */
-.message-context > .fuc,
-.message-context > .message-information{
+.message-context.data-v-a91f51d4 {
 	width: 94%;
-	margin: 5% auto;
+	height: 100%;
+}
+/* 公共样式 */
+.message-context > .fuc.data-v-a91f51d4,
+.message-context > .message-information.data-v-a91f51d4{		
+	margin: 5% auto 0 auto;
 	background-color: #fff;
 	-webkit-border-radius: 20rpx;
 	        border-radius: 20rpx;
@@ -5658,18 +5660,18 @@ scroll-view.cu-steps .cu-item {
 	-webkit-box-shadow: 0 0 20rpx #ddd;
 	        box-shadow: 0 0 20rpx #ddd;
 }
-.message-context > .message-information{
+.message-context > .message-information.data-v-a91f51d4{
+	margin-top: 5%;
 	margin-bottom: 140rpx;
 }
-.message-context{
+.message-context.data-v-a91f51d4{
 	position: absolute;
 	top: 130rpx;
 	left: 3%;
 	width: 94%;
 }
-
 /* 操作条 */
-.message-context > .fuc {
+.message-context > .fuc.data-v-a91f51d4 {
 	height: 200rpx;
 	display: -webkit-box;
 	display: -webkit-flex;
@@ -5678,8 +5680,9 @@ scroll-view.cu-steps .cu-item {
 	-webkit-box-direction: normal;
 	-webkit-flex-flow: row wrap;
 	        flex-flow: row wrap;
+	margin-top: 3%;
 }
-.message-context > .fuc > .message-classification {
+.message-context > .fuc > .message-classification.data-v-a91f51d4 {
 	-webkit-box-flex: 1;
 	-webkit-flex: 1 1 auto;
 	        flex: 1 1 auto;
@@ -5694,36 +5697,35 @@ scroll-view.cu-steps .cu-item {
 	        align-items: center;
 	text-align: center;
 }
-
 /* 禁忌 */
-.message-info {
+.message-info.data-v-a91f51d4 {
 	height: auto;
 	/* margin-bottom: 140rpx; */
 	padding: 4%;
 }
-.message-info > .info {
+.message-info > .info.data-v-a91f51d4 {
 	width: 100%;
 	height: 140rpx;
 	text-align: left;
 	margin-bottom: 40rpx;
 }
-.message-info > .info:last-child{
+.message-info > .info.data-v-a91f51d4:last-child{
 	margin-bottom: 0rpx;
 }
-.message-info > .info > .title {
+.message-info > .info > .title.data-v-a91f51d4 {
 	width: 100%;
 	height: 35%;
 	font-size: 34rpx;
 	color: #3C3F48;
 	font-weight: 500;
 }
-.message-info > .info > .desc {
+.message-info > .info > .desc.data-v-a91f51d4 {
 	width: 100%;
 	height: 40%;
 	font-size: 26rpx;
 	color: #777;
 }
-.message-info > .info > .introduce {
+.message-info > .info > .introduce.data-v-a91f51d4 {
 	width: 100%;
 	height: 10%;
 	font-size: 24rpx;
@@ -5736,17 +5738,17 @@ scroll-view.cu-steps .cu-item {
 	        align-items: center;
 	text-align: center;
 }
-.message-info > .info > .introduce > .date {
+.message-info > .info > .introduce > .date.data-v-a91f51d4 {
 	width: 25%;
 	height: 100%;
 	float: left;
 }
-.message-info > .info > .introduce > .from {
+.message-info > .info > .introduce > .from.data-v-a91f51d4 {
 	width: 50%;
 	height: 100%;
 	float: left;
 }
-.message-info > .info > .introduce > .eye {
+.message-info > .info > .introduce > .eye.data-v-a91f51d4 {
 	width: 25%;
 	height: 100%;
 	float: right;
@@ -5755,16 +5757,16 @@ scroll-view.cu-steps .cu-item {
 
 
 
-.fixed {
+.fixed.data-v-1a1abc60 {
 	position: fixed;
 	z-index: 99;
 }
-.VerticalNav.nav {
+.VerticalNav.nav.data-v-1a1abc60 {
 	width: 200rpx;
 	white-space: initial;
 	height: 100vh;
 }
-.classkind-title{
+.classkind-title.data-v-1a1abc60{
 	width: 100%;
 	text-align: center;
 	background-color: #fff;
@@ -5773,7 +5775,7 @@ scroll-view.cu-steps .cu-item {
 	height: 30px;
 	position: relative;
 }
-.VerticalNav.nav .cu-item {
+.VerticalNav.nav .cu-item.data-v-1a1abc60 {
 	width: 100%;
 	text-align: center;
 	background-color: #fff;
@@ -5782,10 +5784,10 @@ scroll-view.cu-steps .cu-item {
 	height: 50px;
 	position: relative;
 }
-.VerticalNav.nav .cu-item.cur {
+.VerticalNav.nav .cu-item.cur.data-v-1a1abc60 {
 	background-color: #f1f1f1;
 }
-.VerticalNav.nav .cu-item.cur::after {
+.VerticalNav.nav .cu-item.cur.data-v-1a1abc60::after {
 	content: "";
 	width: 8rpx;
 	height: 30rpx;
@@ -5798,14 +5800,14 @@ scroll-view.cu-steps .cu-item {
 	bottom: 0;
 	margin: auto;
 }
-.VerticalBox {
+.VerticalBox.data-v-1a1abc60 {
 	display: -webkit-box;
 	display: -webkit-flex;
 	display: flex;
 	width: 100%;
 	height: 100vh;
 }
-.VerticalMain {
+.VerticalMain.data-v-1a1abc60 {
 	background-color: #f1f1f1;
 	-webkit-box-flex: 1;
 	-webkit-flex: 1;
@@ -5814,20 +5816,89 @@ scroll-view.cu-steps .cu-item {
 }
 
 
-page{
-  padding-bottom: 100rpx;
-}
 
 
-.person-img{
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* page{
+  padding-bottom: 100upx;
+} */
+
+
+.person-img.data-v-390a77b4{
 	position: absolute;
 	top: 130rpx;
 	left: 3%;
 	width: 94%;
 }
-.person-img > .person-top,
-.person-img > .person-botton{
-	width: 94%;
+.person-img > .person-top.data-v-390a77b4,
+.person-img > .person-botton.data-v-390a77b4{
+	width: 100%;
 	margin: 5% auto;
 	background-color: #fff;
 	-webkit-border-radius: 20rpx;
@@ -5839,13 +5910,13 @@ page{
 	-webkit-box-shadow: 0 0 20rpx #ddd;
 	        box-shadow: 0 0 20rpx #ddd;
 }
-.person-img-left{
+.person-img-left.data-v-390a77b4{
 	width: 35%;
 	height: 100%;
 	padding: 5%;
 	float: left;
 }
-.person-img-right {
+.person-img-right.data-v-390a77b4 {
 	width: 65%;
 	height: 100%;
 	padding: 5%;
@@ -5855,14 +5926,14 @@ page{
 	padding-top: 10%;
 	padding-left: 5%;
 }
-.feedback{
+.feedback.data-v-390a77b4{
 	width: 90%;
 	height: 110rpx;
 	/* border-bottom: 1rpx solid #F3F4F6; */
 	padding-left: 3%;
 	padding-top: 2%;
 }
-.button {
+.button.data-v-390a77b4 {
  width: 100%;
  background: white;
  border: none;
@@ -5875,7 +5946,7 @@ page{
  font-size: 32rpx;
  color: #323233;
 }
-.button::after {
+.button.data-v-390a77b4::after {
  border: none;
  -webkit-border-radius: 0;
          border-radius: 0;
@@ -5883,26 +5954,26 @@ page{
 
 
 
-.Identification-file{
+.Identification-file.data-v-d5f939f4{
 	width: 100%;
 	height: 400rpx;
 	background-color: #F7F8FA;
 	padding-top: 15%;
 	padding-left: 35%;
 }
-.Identification-messages{
+.Identification-messages.data-v-d5f939f4{
 	width: 100%;
 	height: 250rpx;
 	margin-top: 50rpx;
 	padding-left: 5%;
 }
-.Identification-m{
+.Identification-m.data-v-d5f939f4{
 	width: 100%;
 	height: 80rpx;
 	font-size: 35rpx;
 	font-style: italic;
 }
-.Identification-button{
+.Identification-button.data-v-d5f939f4{
 	width: 100%;
 	height: 250rpx;
 	padding-top: 15%;
@@ -5910,7 +5981,7 @@ page{
 }
 
 
-.order-vaccine{
+.order-vaccine.data-v-127632e4{
 	width: 100%;
 	height: 200rpx;
 	font-size: 40rpx;

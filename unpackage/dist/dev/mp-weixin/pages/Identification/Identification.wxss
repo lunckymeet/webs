@@ -1,24 +1,24 @@
 
-.Identification-file{
+.Identification-file.data-v-d5f939f4{
 	width: 100%;
 	height: 400rpx;
 	background-color: #F7F8FA;
 	padding-top: 15%;
 	padding-left: 35%;
 }
-.Identification-messages{
+.Identification-messages.data-v-d5f939f4{
 	width: 100%;
 	height: 250rpx;
 	margin-top: 50rpx;
 	padding-left: 5%;
 }
-.Identification-m{
+.Identification-m.data-v-d5f939f4{
 	width: 100%;
 	height: 80rpx;
 	font-size: 35rpx;
 	font-style: italic;
 }
-.Identification-button{
+.Identification-button.data-v-d5f939f4{
 	width: 100%;
 	height: 250rpx;
 	padding-top: 15%;

@@ -38,6 +38,5 @@
     "order": "/pages/order/order",
     "navtop": "/pages/navTop/navTop",
     "pagetop": "/pages/navTop/pageTop"
-  },
-  "sitemapLocation": "sitemap15.json"
+  }
 }

@@ -167,7 +167,7 @@
 	}
 </script>
 
-<style>
+<style scoped>
 	.fixed {
 		position: fixed;
 		z-index: 99;

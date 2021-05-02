@@ -68,7 +68,7 @@
 </script>
 
 <style>
-page{
+/* page{
   padding-bottom: 100upx;
-}
+} */
 </style>

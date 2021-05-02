@@ -1,13 +1,13 @@
 
-.person-img{
+.person-img.data-v-390a77b4{
 	position: absolute;
 	top: 130rpx;
 	left: 3%;
 	width: 94%;
 }
-.person-img > .person-top,
-.person-img > .person-botton{
-	width: 94%;
+.person-img > .person-top.data-v-390a77b4,
+.person-img > .person-botton.data-v-390a77b4{
+	width: 100%;
 	margin: 5% auto;
 	background-color: #fff;
 	-webkit-border-radius: 20rpx;
@@ -19,13 +19,13 @@
 	-webkit-box-shadow: 0 0 20rpx #ddd;
 	        box-shadow: 0 0 20rpx #ddd;
 }
-.person-img-left{
+.person-img-left.data-v-390a77b4{
 	width: 35%;
 	height: 100%;
 	padding: 5%;
 	float: left;
 }
-.person-img-right {
+.person-img-right.data-v-390a77b4 {
 	width: 65%;
 	height: 100%;
 	padding: 5%;
@@ -35,14 +35,14 @@
 	padding-top: 10%;
 	padding-left: 5%;
 }
-.feedback{
+.feedback.data-v-390a77b4{
 	width: 90%;
 	height: 110rpx;
 	/* border-bottom: 1rpx solid #F3F4F6; */
 	padding-left: 3%;
 	padding-top: 2%;
 }
-.button {
+.button.data-v-390a77b4 {
  width: 100%;
  background: white;
  border: none;
@@ -55,7 +55,7 @@
  font-size: 32rpx;
  color: #323233;
 }
-.button::after {
+.button.data-v-390a77b4::after {
  border: none;
  -webkit-border-radius: 0;
          border-radius: 0;
