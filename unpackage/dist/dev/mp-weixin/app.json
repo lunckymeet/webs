@@ -1,0 +1,43 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/subscribe/subscribe",
+    "pages/message/message",
+    "pages/consulting/consulting",
+    "pages/vaccine/vaccine",
+    "pages/person/person",
+    "pages/updateMessage/updateMessage",
+    "pages/Identification/Identification",
+    "pages/order/order",
+    "pages/navTop/navTop",
+    "pages/classkind/classkind",
+    "pages/position/position",
+    "pages/scan/scan"
+  ],
+  "subPackages": [],
+  "window": {
+    "navigationStyle": "custom"
+  },
+  "uniStatistics": {
+    "enable": true
+  },
+  "permission": {
+    "scope.userLocation": {
+      "desc": "你的位置信息将用于小程序位置接口的效果展示"
+    }
+  },
+  "usingComponents": {
+    "tops": "/colorui/components/cu-custom",
+    "vaccine": "/pages/vaccine/vaccine",
+    "message": "/pages/message/message",
+    "classkind": "/pages/classkind/classkind",
+    "update-message": "/pages/updateMessage/updateMessage",
+    "consulting": "/pages/consulting/consulting",
+    "person": "/pages/person/person",
+    "identification": "/pages/Identification/Identification",
+    "order": "/pages/order/order",
+    "navtop": "/pages/navTop/navTop",
+    "pagetop": "/pages/navTop/pageTop"
+  },
+  "sitemapLocation": "sitemap15.json"
+}

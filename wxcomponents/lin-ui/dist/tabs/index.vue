@@ -24,7 +24,7 @@
       <slot :name="item.key"></slot>
     </view>
   </view>
-  <swiper v-else class="l-tabpanel-content l-tabpanel-swiper l-class-content l-content-class" @change="_$self.$parent[('swiperChange')]($event)" :style="contentHeight?'height:'+contentHeight+'rpx;':''" :current="currentIndex" :vertical="placement==='left'||placement==='right'">
+  <swiper v-else class="l-tabpanel-content l-tabpanel-swiper l-class-content l-content-class" @change="_$self.$parent.$parent[('swiperChange')]($event)" :style="contentHeight?'height:'+contentHeight+'rpx;':''" :current="currentIndex" :vertical="placement==='left'||placement==='right'">
     <swiper-item v-for="(item,index) in (tabList)" :key="item.key" :class="'l-tabpanel l-tabpanel-class '+(item.key===activeKey?'l-tabpanel-active':'')">
       <slot :name="item.key"></slot>
     </swiper-item>

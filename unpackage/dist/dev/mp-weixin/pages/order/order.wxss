@@ -1,0 +1,7 @@
+
+.order-vaccine{
+	width: 100%;
+	height: 200rpx;
+	font-size: 40rpx;
+}
+

@@ -64,13 +64,85 @@
 						@change="getName"
 					  />
 				</view>
+				
+				<view class="info">
+					<van-field
+					    :value="personPhone"
+					    label="电话号码"
+					    type="textarea"
+					    placeholder="请输入电话号码"
+					    :border="false"
+						@change="getPhone"
+					  />
+				</view>
+				
+				<view class="info">
+					<van-field
+					    :value="personAddress"
+					    label="家庭住址"
+					    type="textarea"
+					    placeholder="请输入家庭住址"
+					    :border="false"
+						@change="getAddress"
+					  />
+				</view>
+				
+				<view class="info-button">
+					<van-button round type="info" name="个人预约">确认预约</van-button>
+				</view>
+				
 			  </view>
 			  
 		  </van-tab>
 		  
 		  <van-tab title="团体">
 			  <view class="info-list team">
+			  	<view class="info">
+			  		<van-field
+			  		    :value="personName"
+			  		    label="姓名"
+			  		    type="textarea"
+			  		    placeholder="请输入姓名"
+			  		    :border="false"
+			  			@change="getName"
+			  		  />
+			  	</view>
 			  	
+			  	<view class="info">
+			  		<van-field
+			  		    :value="personPhone"
+			  		    label="电话号码"
+			  		    type="textarea"
+			  		    placeholder="请输入电话号码"
+			  		    :border="false"
+			  			@change="getPhone"
+			  		  />
+			  	</view>
+			  	
+			  	<view class="info">
+			  		<van-field
+			  		    :value="personAddress"
+			  		    label="家庭住址"
+			  		    type="textarea"
+			  		    placeholder="请输入家庭住址"
+			  		    :border="false"
+			  			@change="getAddress"
+			  		  />
+			  	</view>
+				
+				<view class="info">
+					<van-field
+					    :value="personCompany"
+					    label="所属单位"
+					    type="textarea"
+					    placeholder="请输入所属单位"
+					    :border="false"
+						@change="getCompany"
+					  />
+				</view>
+			  	<view class="info-button">
+					<van-button round type="info" name="团体预约">确认预约</van-button>
+				</view>
 			  </view>
 		  </van-tab>
 		</van-tabs>
@@ -189,7 +261,13 @@
 		width: 100%;
 		height: auto;
 		min-height: 80%;
-		background-color: #007AFF;
 		margin: 0 auto;
+	}
+	
+	.info-button{
+		width: 100%;
+		height: 200rpx;
+		padding-left: 38%;
+		padding-top: 10%;
 	}
 </style>

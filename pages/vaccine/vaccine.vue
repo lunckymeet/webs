@@ -271,20 +271,20 @@
 				topHeight: 580, // 顶部高度
 				topContextHeight: 0, // 顶部内容高度
 				data: null, // 疫情数据
-				operation: [
-					{
-						icon: "/static/images/vaccine/appointment.png",
-						title: "预约",
-						path: "/pages/subscribe/subscribe",
-						thing: "skip()"
-					},
-					{
-						icon: "/static/images/vaccine/scan.png",
-						title: "扫一扫",
-						path: "/pages/message/message",
-						thing: "scanQrCode()"
-					}
-				],
+				// operation: [
+				// 	{
+				// 		icon: "/static/images/vaccine/appointment.png",
+				// 		title: "预约",
+				// 		path: "/pages/subscribe/subscribe",
+				// 		thing: "skip()"
+				// 	},
+				// 	{
+				// 		icon: "/static/images/vaccine/scan.png",
+				// 		title: "扫一扫",
+				// 		path: "/pages/message/message",
+				// 		thing: "scanQrCode()"
+				// 	}
+				// ],
 				scroll: 1,
 				steps: [
 					{

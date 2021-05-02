@@ -23,7 +23,8 @@
 					"van-picker": "/wxcomponents/vant/dist/picker/index",
 					"van-tab": "/wxcomponents/vant/dist/tab/index",
 					"van-tabs": "/wxcomponents/vant/dist/tabs/index",
-					"van-datetime-picker": "/wxcomponents/vant/dist/datetime-picker/index"
+					"van-datetime-picker": "/wxcomponents/vant/dist/datetime-picker/index",
+					"van-button": "/wxcomponents/vant/dist/button/index"
 				}
 		    }
 		    
@@ -35,12 +36,21 @@
                 "navigationBarTitleText": "",
                 "enablePullDownRefresh": false,
 				"usingComponents": {
-					
+					"van-search": "/wxcomponents/vant/dist/search/index",
+					"van-icon": "/wxcomponents/vant/dist/icon/index"
 				}
             }
             
-        }
-        ,{
+        },
+		{
+		    "path" : "pages/consulting/consulting",
+		    "style" :                                                                                    
+		    {
+		        "navigationBarTitleText": "",
+		        "enablePullDownRefresh": false
+		    }
+		},
+		{
             "path" : "pages/vaccine/vaccine",
             "style" :                                                                                    
             {
@@ -58,11 +68,56 @@
             "style" :                                                                                    
             {
                 "navigationBarTitleText": "",
-                "enablePullDownRefresh": false
+                "enablePullDownRefresh": false,
+				"usingComponents": {
+				  "van-image": "/wxcomponents/vant/dist/image/index",
+				  "van-cell": "/wxcomponents/vant/dist/cell/index",
+				  "van-cell-group": "/wxcomponents/vant/dist/cell-group/index"
+				}
             }
             
-        }
-        ,{
+        },
+		{
+		    "path" : "pages/updateMessage/updateMessage",
+		    "style" :                                                                                    
+		    {
+		        "navigationBarTitleText": "",
+		        "enablePullDownRefresh": false,
+				"usingComponents": {
+					"van-field": "/wxcomponents/vant/dist/field/index",
+					"van-toast": "/wxcomponents/vant/dist/toast/index"
+				}
+		    }
+		    
+		},
+		{
+		    "path" : "pages/Identification/Identification",
+		    "style" :                                                                                    
+		    {
+		        "navigationBarTitleText": "",
+		        "enablePullDownRefresh": false,
+				"usingComponents": {
+					"van-uploader": "/wxcomponents/vant/dist/uploader/index",
+					"van-button": "/wxcomponents/vant/dist/button/index"
+				}
+		    }
+		}
+		,
+		{
+		    "path" : "pages/order/order",
+		    "style" :                                                                                    
+		    {
+		        "navigationBarTitleText": "",
+		        "enablePullDownRefresh": false,
+				"usingComponents": {
+					 "van-tab": "/wxcomponents/vant/dist/tab/index",
+					 "van-tabs": "/wxcomponents/vant/dist/tabs/index",
+					 "van-card": "/wxcomponents/vant/dist/card/index"
+				}
+		    }
+		}
+		,
+		{
             "path" : "pages/navTop/navTop",
             "style" :                                                                                    
             {
@@ -73,8 +128,20 @@
 				}
             }
             
-        }
-        ,{
+        },
+		{
+		    "path" : "pages/classkind/classkind",
+		    "style" :                                                                                    
+		    {
+		        "navigationBarTitleText": "",
+		        "enablePullDownRefresh": false,
+				"usingComponents": {
+					"van-tree-select": "/wxcomponents/vant/dist/tree-select/index"
+				}
+		    }
+		    
+		},
+		{
             "path" : "pages/position/position",
             "style" :                                                                                    
             {

@@ -12,9 +12,29 @@ Vue.component("vaccine", vaccine);
 import message from "./pages/message/message.vue";
 Vue.component("message", message);
 
+// 分类
+import classkind from "./pages/classkind/classkind.vue";
+Vue.component("classkind", classkind);
+
+// 修改个人资料
+import updateMessage from "./pages/updateMessage/updateMessage.vue";
+Vue.component("updateMessage", updateMessage);
+
+// 聊天
+import consulting from "./pages/consulting/consulting.vue";
+Vue.component("consulting", consulting);
+
 // 个人中心页面
 import person from "./pages/person/person.vue";
 Vue.component("person", person);
+
+// 身份证识别页面
+import Identification from "./pages/Identification/Identification.vue";
+Vue.component("Identification", Identification);
+
+// 历史订单页面
+import order from "./pages/order/order.vue";
+Vue.component("order", order);
 
 // 二级页面顶部导航栏
 import navTop from "./pages/navTop/navTop.vue";

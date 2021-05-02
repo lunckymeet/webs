@@ -1,0 +1,116 @@
+
+.warp{
+	height: 100vh;
+}
+
+/* 公共样式 */
+.message-context > .fuc,
+.message-context > .message-information{
+	width: 94%;
+	margin: 5% auto;
+	background-color: #fff;
+	-webkit-border-radius: 20rpx;
+	        border-radius: 20rpx;
+	-webkit-box-sizing: border-box;
+	        box-sizing: border-box;
+	overflow: hidden;
+	padding: 2% 2% 0 2%;
+	-webkit-box-shadow: 0 0 20rpx #ddd;
+	        box-shadow: 0 0 20rpx #ddd;
+}
+.message-context > .message-information{
+	margin-bottom: 140rpx;
+}
+.message-context{
+	position: absolute;
+	top: 130rpx;
+	left: 3%;
+	width: 94%;
+}
+
+/* 操作条 */
+.message-context > .fuc {
+	height: 200rpx;
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: flex;
+	-webkit-box-orient: horizontal;
+	-webkit-box-direction: normal;
+	-webkit-flex-flow: row wrap;
+	        flex-flow: row wrap;
+}
+.message-context > .fuc > .message-classification {
+	-webkit-box-flex: 1;
+	-webkit-flex: 1 1 auto;
+	        flex: 1 1 auto;
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: flex;
+	-webkit-box-pack: center;
+	-webkit-justify-content: center;
+	        justify-content: center;
+	-webkit-box-align: center;
+	-webkit-align-items: center;
+	        align-items: center;
+	text-align: center;
+}
+
+/* 禁忌 */
+.message-info {
+	height: auto;
+	/* margin-bottom: 140rpx; */
+	padding: 4%;
+}
+.message-info > .info {
+	width: 100%;
+	height: 140rpx;
+	text-align: left;
+	margin-bottom: 40rpx;
+}
+.message-info > .info:last-child{
+	margin-bottom: 0rpx;
+}
+.message-info > .info > .title {
+	width: 100%;
+	height: 35%;
+	font-size: 34rpx;
+	color: #3C3F48;
+	font-weight: 500;
+}
+.message-info > .info > .desc {
+	width: 100%;
+	height: 40%;
+	font-size: 26rpx;
+	color: #777;
+}
+.message-info > .info > .introduce {
+	width: 100%;
+	height: 10%;
+	font-size: 24rpx;
+	color: #aaa;
+	-webkit-box-pack: center;
+	-webkit-justify-content: center;
+	        justify-content: center;
+	-webkit-box-align: center;
+	-webkit-align-items: center;
+	        align-items: center;
+	text-align: center;
+}
+.message-info > .info > .introduce > .date {
+	width: 25%;
+	height: 100%;
+	float: left;
+}
+.message-info > .info > .introduce > .from {
+	width: 50%;
+	height: 100%;
+	float: left;
+}
+.message-info > .info > .introduce > .eye {
+	width: 25%;
+	height: 100%;
+	float: right;
+}
+
+
+
