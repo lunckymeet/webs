@@ -54,6 +54,9 @@
 	        align-items: center;
 	text-align: center;
 }
+.message-classification > .title{
+	margin-left: 3%;
+}
 
 /* 禁忌 */
 .message-info {
