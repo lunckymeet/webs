@@ -225,4 +225,10 @@
 	height: 100%;
 	float: right;
 }
+.vaccine-abnormal{
+	position: absolute;
+	bottom: 120rpx;
+	right: 0rpx;
+	background-color: #007AFF;
+}
 

@@ -14,8 +14,8 @@
 				</view>
 				<view class="person-img-right">
 					<view class="person-name">姓名：{{name}}</view>
-					<view class="person-age">年龄：{{age}}岁</view>
-					<view class="updateMessage" @click="skip($event)" data-path="/pages/updateMessage/updateMessage">修改个人资料</view>
+					<view class="person-age">身份证号：{{age}}</view>
+					<view class="updateMessage" @click="skip($event)" data-path="/pages/updateMessage/updateMessage">修改信息</view>
 				</view>
 			</view>
 			<view class="person-botton">

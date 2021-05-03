@@ -5637,6 +5637,12 @@ scroll-view.cu-steps .cu-item {
 	height: 100%;
 	float: right;
 }
+.vaccine-abnormal{
+	position: absolute;
+	bottom: 120rpx;
+	right: 0rpx;
+	background-color: #007AFF;
+}
 
 
 .warp{
@@ -5693,6 +5699,9 @@ scroll-view.cu-steps .cu-item {
 	-webkit-align-items: center;
 	        align-items: center;
 	text-align: center;
+}
+.message-classification > .title{
+	margin-left: 3%;
 }
 
 /* 禁忌 */
