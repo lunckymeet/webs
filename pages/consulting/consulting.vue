@@ -7,8 +7,8 @@
 			</view>
 			<view class="cu-item self">
 				<view class="main">
-					<view class="content bg-green shadow">
-						<text>喵喵喵！喵喵喵！喵喵喵！喵喵！喵喵！！喵！喵喵喵！</text>
+					<view class="content bg-green shadow messages-text">
+						
 					</view>
 				</view>
 				<view class="cu-avatar radius" style="background-image:url(https://ossweb-img.qq.com/images/lol/web201310/skin/big107000.jpg);"></view>
@@ -16,7 +16,7 @@
 			</view>
 			<view class="cu-item">
 				<view class="cu-avatar radius" style="background-image:url(https://ossweb-img.qq.com/images/lol/web201310/skin/big143004.jpg);"></view>
-				<view class="main">
+				<view class="main-end">
 					<view class="content shadow">
 						<text>喵喵喵！喵喵喵！</text>
 					</view>
@@ -33,11 +33,11 @@
 				<text class="cuIcon-sound text-grey"></text>
 			</view>
 			<input class="solid-bottom" :adjust-position="false" :focus="false" maxlength="300" cursor-spacing="10"
-			 @focus="InputFocus" @blur="InputBlur"></input>
+			 @focus="InputFocus" @blur="InputBlur" id="input" v-model="input"></input>
 			<view class="action">
 				<text class="cuIcon-emojifill text-grey"></text>
 			</view>
-			<button class="cu-btn bg-green shadow">发送</button>
+			<button class="cu-btn bg-green shadow" @click="send()">发送</button>
 		</view>
 
 	</view>
@@ -49,7 +49,8 @@
 		data() {
 			return {
 				InputBottom: 0,
-				time:"1"
+				time:"1",
+				input:""
 			};
 		},
 		onLoad: function () {
@@ -61,14 +62,17 @@
 			},
 			InputBlur(e) {
 				this.InputBottom = 0
-			}
-			
+			},
+			send : function () {
+				var x =  this.input;
+				console.log(x);
+			},
 		}
 	}
 </script>
 
 <style>
-page{
+/* page{
   padding-bottom: 100upx;
-}
+} */
 </style>

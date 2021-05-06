@@ -13,8 +13,8 @@
 					/>
 				</view>
 				<view class="person-img-right">
-					<view class="person-name">姓名：{{name}}</view>
-					<view class="person-age">身份证号：{{age}}</view>
+					<!-- <view class="person-name">姓名：{{name}}</view>
+					<view class="person-idcard">身份证号：{{idcard}}</view> -->
 					<view class="updateMessage" @click="skip($event)" data-path="/pages/updateMessage/updateMessage">修改信息</view>
 				</view>
 			</view>
@@ -60,20 +60,22 @@
 		data() {
 			return {
 				name:"lyt",
-				age:1
+				idcard:"141414141414141414"
 			}
 		},
+		
 		methods: {
 			skip: function (e) {
 				uni.navigateTo({
 					url:e.currentTarget.dataset.path
 				})
-			}
-		}
+			},
+		},
+		
 	}
 </script>
 
-<style>
+<style scoped>
 	.person-img{
 		position: absolute;
 		top: 130rpx;
@@ -83,7 +85,7 @@
 	
 	.person-img > .person-top ,
 	.person-img > .person-botton{
-		width: 94%;
+		width: 100%;
 		margin: 5% auto;
 		background-color: #fff;
 		border-radius: 20rpx;
@@ -94,21 +96,24 @@
 	}
 	
 	.person-img-left{
-		width: 35%;
-		height: 100%;
-		padding: 5%;
-		float: left;
+		width: 100%;
+		height: 80%;
+		padding-top: 5%;
+		padding-left: 37%;
+		/* float: left; */
 	}
 	
 	.person-img-right {
-		width: 65%;
-		height: 100%;
-		padding: 5%;
+		width: 100%;
+		height: 20%;
+		padding: 5% 5% 5% 7%;
 		float: right;
-		/* text-align: center; */
-		font-size: 35rpx;
-		padding-top: 10%;
-		padding-left: 5%;
+		text-align: center;
+		font-size: 30rpx;
+		/* padding-top: 20%;
+		padding-left: 20%; */
+		color: #888888;
+		font-weight: bolder;
 	}
 	
 	.feedback{

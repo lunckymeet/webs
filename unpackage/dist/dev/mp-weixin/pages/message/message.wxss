@@ -1,35 +1,34 @@
 
-.warp{
+.wrap.data-v-a91f51d4{
 	height: 100vh;
 }
-
-/* 公共样式 */
-.message-context > .fuc,
-.message-context > .message-information{
+.message-context.data-v-a91f51d4 {
 	width: 94%;
-	margin: 5% auto;
+	height: 100%;
+}
+/* 公共样式 */
+.message-context > .fuc.data-v-a91f51d4,
+.message-context > .message-information.data-v-a91f51d4{		
+	margin: 5% auto 0 auto;
 	background-color: #fff;
-	-webkit-border-radius: 20rpx;
-	        border-radius: 20rpx;
-	-webkit-box-sizing: border-box;
-	        box-sizing: border-box;
+	border-radius: 20rpx;
+	box-sizing: border-box;
 	overflow: hidden;
 	padding: 2% 2% 0 2%;
-	-webkit-box-shadow: 0 0 20rpx #ddd;
-	        box-shadow: 0 0 20rpx #ddd;
+	box-shadow: 0 0 20rpx #ddd;
 }
-.message-context > .message-information{
+.message-context > .message-information.data-v-a91f51d4{
+	margin-top: 5%;
 	margin-bottom: 140rpx;
 }
-.message-context{
+.message-context.data-v-a91f51d4{
 	position: absolute;
 	top: 130rpx;
 	left: 3%;
 	width: 94%;
 }
-
 /* 操作条 */
-.message-context > .fuc {
+.message-context > .fuc.data-v-a91f51d4 {
 	height: 200rpx;
 	display: -webkit-box;
 	display: -webkit-flex;
@@ -38,8 +37,9 @@
 	-webkit-box-direction: normal;
 	-webkit-flex-flow: row wrap;
 	        flex-flow: row wrap;
+	margin-top: 3%;
 }
-.message-context > .fuc > .message-classification {
+.message-context > .fuc > .message-classification.data-v-a91f51d4 {
 	-webkit-box-flex: 1;
 	-webkit-flex: 1 1 auto;
 	        flex: 1 1 auto;
@@ -54,39 +54,38 @@
 	        align-items: center;
 	text-align: center;
 }
-.message-classification > .title{
+.message-classification > .title.data-v-a91f51d4{
 	margin-left: 3%;
 }
-
 /* 禁忌 */
-.message-info {
+.message-info.data-v-a91f51d4 {
 	height: auto;
 	/* margin-bottom: 140rpx; */
 	padding: 4%;
 }
-.message-info > .info {
+.message-info > .info.data-v-a91f51d4 {
 	width: 100%;
 	height: 140rpx;
 	text-align: left;
 	margin-bottom: 40rpx;
 }
-.message-info > .info:last-child{
+.message-info > .info.data-v-a91f51d4:last-child{
 	margin-bottom: 0rpx;
 }
-.message-info > .info > .title {
+.message-info > .info > .title.data-v-a91f51d4 {
 	width: 100%;
 	height: 35%;
 	font-size: 34rpx;
 	color: #3C3F48;
 	font-weight: 500;
 }
-.message-info > .info > .desc {
+.message-info > .info > .desc.data-v-a91f51d4 {
 	width: 100%;
 	height: 40%;
 	font-size: 26rpx;
 	color: #777;
 }
-.message-info > .info > .introduce {
+.message-info > .info > .introduce.data-v-a91f51d4 {
 	width: 100%;
 	height: 10%;
 	font-size: 24rpx;
@@ -99,21 +98,20 @@
 	        align-items: center;
 	text-align: center;
 }
-.message-info > .info > .introduce > .date {
+.message-info > .info > .introduce > .date.data-v-a91f51d4 {
 	width: 25%;
 	height: 100%;
 	float: left;
 }
-.message-info > .info > .introduce > .from {
+.message-info > .info > .introduce > .from.data-v-a91f51d4 {
 	width: 50%;
 	height: 100%;
 	float: left;
 }
-.message-info > .info > .introduce > .eye {
+.message-info > .info > .introduce > .eye.data-v-a91f51d4 {
 	width: 25%;
 	height: 100%;
 	float: right;
 }
-
 
 

@@ -2,7 +2,7 @@
 	<view class="Identification-view">
 		<navtop topTitle="身份证识别"></navtop>
 		<view class="Identification-file">
-			<van-uploader file-list="{{ fileList }}" bind:after-read="afterRead"/>
+			<van-uploader :file-list="fileList" bind:after-read="afterRead"/>
 		</view>
 		<view class="Identification-messages">
 			<view class="Identification-m">姓名：{{name}}</view>
@@ -46,7 +46,7 @@
 	}
 </script>
 
-<style>
+<style scoped>
 	.Identification-file{
 		width: 100%;
 		height: 400rpx;

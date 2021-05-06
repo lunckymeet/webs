@@ -258,15 +258,9 @@
 					
 				</view>
 			</view>
-			<view class="vaccine-abnormal">
-				<view class="info" @click="skip($event)" data-path="/pages/abnormal/abnormal">
-					<van-icon size="80rpx" name="/static/images/vaccine/abnormal.png"></van-icon>
-					<view class="title" style="margin-top: 10rpx;">
-						异常上报
-					</view>
-				</view>
-			</view>
+			
 		</view>
+		
 
 	</scroll-view>
 </template>
@@ -361,7 +355,7 @@
 	}
 </script>
 
-<style>
+<style scoped>
 	.wrap {
 		height: 100vh;
 	}
@@ -568,10 +562,5 @@
 		float: right;
 	}
 	
-	.vaccine-abnormal{
-		position: absolute;
-		bottom: 120rpx;
-		right: 0rpx;
-		background-color: #007AFF;
-	}
+	
 </style>

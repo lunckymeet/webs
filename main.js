@@ -28,6 +28,10 @@ Vue.component("consulting", consulting);
 import person from "./pages/person/person.vue";
 Vue.component("person", person);
 
+// 异常上报
+import abnormal from "./pages/abnormal/abnormal.vue";
+Vue.component("abnormal", abnormal);
+
 // 身份证识别页面
 import Identification from "./pages/Identification/Identification.vue";
 Vue.component("Identification", Identification);

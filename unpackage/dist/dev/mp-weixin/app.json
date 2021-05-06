@@ -7,6 +7,7 @@
     "pages/vaccine/vaccine",
     "pages/person/person",
     "pages/updateMessage/updateMessage",
+    "pages/abnormal/abnormal",
     "pages/Identification/Identification",
     "pages/order/order",
     "pages/navTop/navTop",
@@ -34,10 +35,11 @@
     "update-message": "/pages/updateMessage/updateMessage",
     "consulting": "/pages/consulting/consulting",
     "person": "/pages/person/person",
+    "abnormal": "/pages/abnormal/abnormal",
     "identification": "/pages/Identification/Identification",
     "order": "/pages/order/order",
     "navtop": "/pages/navTop/navTop",
     "pagetop": "/pages/navTop/pageTop"
   },
-  "sitemapLocation": "sitemap15.json"
+  "sitemapLocation": "sitemap48.json"
 }

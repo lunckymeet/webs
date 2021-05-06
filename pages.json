@@ -85,10 +85,24 @@
 		        "enablePullDownRefresh": false,
 				"usingComponents": {
 					"van-field": "/wxcomponents/vant/dist/field/index",
-					"van-toast": "/wxcomponents/vant/dist/toast/index"
+					"van-toast": "/wxcomponents/vant/dist/toast/index",
+					"van-button": "/wxcomponents/vant/dist/button/index"
 				}
 		    }
 		    
+		},
+		{
+		    "path" : "pages/abnormal/abnormal",
+		    "style" :                                                                                    
+		    {
+		        "navigationBarTitleText": "",
+		        "enablePullDownRefresh": false,
+				"usingComponents": {
+				  "van-field": "/wxcomponents/vant/dist/field/index",
+				  "van-dialog": "/wxcomponents/vant/dist/dialog/index",
+				  "van-datetime-picker": "/wxcomponents/vant/dist/datetime-picker/index"
+				}
+		    }
 		},
 		{
 		    "path" : "pages/Identification/Identification",

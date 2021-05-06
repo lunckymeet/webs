@@ -50,16 +50,18 @@
 	}
 </script>
 
-<style>
-	.warp{
+<style scoped>
+	.wrap{
 		height: 100vh;
 	}
-	
+	.message-context {
+		width: 94%;
+		height: 100%;
+	}
 	/* 公共样式 */
 	.message-context > .fuc ,
-	.message-context > .message-information{
-		width: 94%;
-		margin: 5% auto;
+	.message-context > .message-information{		
+		margin: 5% auto 0 auto;
 		background-color: #fff;
 		border-radius: 20rpx;
 		box-sizing: border-box;
@@ -69,6 +71,7 @@
 	}
 	
 	.message-context > .message-information{
+		margin-top: 5%;
 		margin-bottom: 140rpx;
 	}
 	
@@ -85,6 +88,7 @@
 		height: 200rpx;
 		display: flex;
 		flex-flow: row wrap;
+		margin-top: 3%;
 	}
 	
 	.message-context > .fuc > .message-classification {
@@ -159,5 +163,4 @@
 		float: right;
 	}
 	
-
 </style>

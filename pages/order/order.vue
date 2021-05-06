@@ -41,7 +41,7 @@
 	}
 </script>
 
-<style>
+<style scoped>
 	.order-vaccine{
 		width: 100%;
 		height: 200rpx;

@@ -16,6 +16,16 @@
 			<person v-if="path == 'person'"></person>
 		</van-transition>
 		
+		<!-- 异常上报 -->
+		<view class="vaccine-abnormal">
+			<view class="info" @click="skip($event)" data-path="/pages/abnormal/abnormal">
+				<van-icon size="90rpx" name="/static/images/vaccine/abnormal.png"></van-icon>
+				<view class="title" style="margin-top: 10rpx;">
+					异常上报
+				</view>
+			</view>
+		</view>
+		
 		<!-- 底部导航栏 -->
 		<view class="index-footer">
 			<view class="tabbar" v-for="page in pageList" :key="page.id" :data-url="[page.page]" @click="changepage">
@@ -57,7 +67,12 @@
 			changepage: function(e) {
 				console.log(e.currentTarget.dataset.url);
 				this.path = e.currentTarget.dataset.url[0];
-			}
+			},
+			skip: function (e) {
+				uni.navigateTo({
+					url:e.currentTarget.dataset.path
+				})
+			},
 		}
 	}
 </script>
@@ -65,7 +80,7 @@
 <style>
 	.index-wrap {
 		width: 100%;
-		height: auto;
+		height: 100vhc;
 	}
 	
 	.index-wrap > .index-footer {
@@ -91,5 +106,13 @@
 		display: flex;
 		justify-content: center;
 		align-items: center;
+	}
+	
+	.vaccine-abnormal{
+		position: absolute;
+		bottom: 120rpx;
+		right: 0rpx;
+		/* background-color: #007AFF; */
+		z-index: 99;
 	}
 </style>
