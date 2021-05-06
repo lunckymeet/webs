@@ -11,8 +11,10 @@
 	height: 120rpx;
 	line-height: 120rpx;
 	background-color: #fff;
-	box-shadow: 0 0 20rpx #ddd;
-	border-radius: 40rpx 40rpx 0 0;
+	-webkit-box-shadow: 0 0 20rpx #ddd;
+	        box-shadow: 0 0 20rpx #ddd;
+	-webkit-border-radius: 40rpx 40rpx 0 0;
+	        border-radius: 40rpx 40rpx 0 0;
 	overflow: hidden;
 	display: -webkit-box;
 	display: -webkit-flex;

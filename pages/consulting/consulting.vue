@@ -23,7 +23,7 @@
 				</view>
 				<view class="date ">{{time}}</view>
 			</view>
-			
+			{{message}}
 			<view class="cu-info round">咨询结束，请对本次咨询进行<text class="text-blue">评分</text></view>
 			
 		</view>
@@ -48,6 +48,7 @@
 	export default {
 		data() {
 			return {
+				message: [],
 				InputBottom: 0,
 				time:"1",
 				input:""
@@ -65,6 +66,7 @@
 			},
 			send : function () {
 				var x =  this.input;
+				this.$data.message.push(x);
 				console.log(x);
 			},
 		}
