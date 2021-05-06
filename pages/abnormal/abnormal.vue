@@ -22,7 +22,7 @@
 		
 		<view class="info">
 			<van-field
-			    :value="personDate"
+			    :value="abnormalDate"
 				label="接种时间"
 			    placeholder="请选择时间"
 				:readonly="true"
@@ -37,9 +37,10 @@
 			  	:showConfirmButton="false"
 			  >
 			    <van-datetime-picker
-			      type="date"
+			      type="datetime"
 				  :value="currentDate"
 				  :min-date="minDate"
+				  :max-date="maxDate"
 				  :formatter="dateFormate"
 				  @cancel="closeDate"
 				  @confirm="closeDate"
@@ -65,8 +66,10 @@
 	export default {
 		data() {
 			return {
+				abnormalDate: "",
 				currentDate: new Date().getTime(),
 				minDate: new Date().getTime() - (60 * 60 * 30),
+				maxDate: new Date().getTime(),
 				dateShow: false
 			}
 		},
@@ -86,15 +89,26 @@
 				if(type === 'day') {
 					return value + '日';
 				}
+				
+				if(type === 'hour') {
+					return value + '时';
+				}
+				
+				if(type === 'minute') {
+					return value + '分';
+				}
 			},
 			closeDate: function(e) {
 				this.$data.dateShow = false;
+				
 				const date = new Date(e.detail);
 				const year = date.getFullYear() + "年";
 				const month = (date.getMonth() + 1) + "月";
 				const day = date.getDay() + "日";
+				const hour = date.getHours() + "时";
+				const minute = date.getMinutes() + "分";
 				
-				this.$data.personDate = year + month + day;
+				this.$data.abnormalDate = year + month + day + hour + minute;
 				console.log(e);
 			}
 		}
