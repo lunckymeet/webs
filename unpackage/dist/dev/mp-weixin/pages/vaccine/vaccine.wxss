@@ -9,6 +9,7 @@
 }
 .vaccine-wrap>.vaccine-top.data-v-0804e272 {
 	width: 100%;
+	background: -webkit-gradient(linear, left top, left bottom, from(#ffd943), color-stop(#ffd943), color-stop(#ffd943), to(rgba(0, 0, 0, 0)));
 	background: -webkit-linear-gradient(top, #ffd943, #ffd943, #ffd943, rgba(0, 0, 0, 0));
 	background: linear-gradient(to bottom, #ffd943, #ffd943, #ffd943, rgba(0, 0, 0, 0));
 }
@@ -28,11 +29,14 @@
 	width: 94%;
 	margin: 5% auto;
 	background-color: #fff;
-	border-radius: 20rpx;
-	box-sizing: border-box;
+	-webkit-border-radius: 20rpx;
+	        border-radius: 20rpx;
+	-webkit-box-sizing: border-box;
+	        box-sizing: border-box;
 	overflow: hidden;
 	padding: 2% 2% 0 2%;
-	box-shadow: 0 0 20rpx #ddd;
+	-webkit-box-shadow: 0 0 20rpx #ddd;
+	        box-shadow: 0 0 20rpx #ddd;
 }
 /* 疫情样式 */
 .vaccine-wrap > .vaccine-context > .vaccine-epidemic.data-v-0804e272 {
@@ -73,7 +77,8 @@
 	-webkit-flex-flow: row wrap;
 	        flex-flow: row wrap;
 	padding: 5%;
-	box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	        box-sizing: border-box;
 }
 .vaccine-wrap > .vaccine-context > .vaccine-epidemic > .epidemic .data-list .data.data-v-0804e272 {
 	width: 50%;
