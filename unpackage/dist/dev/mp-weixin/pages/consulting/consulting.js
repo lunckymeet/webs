@@ -1,6 +1,6 @@
 (global["webpackJsonp"] = global["webpackJsonp"] || []).push([["pages/consulting/consulting"],{
 
-/***/ 102:
+/***/ 116:
 /*!**************************************************************************************!*\
   !*** D:/software/HBuilder/health/main.js?{"page":"pages%2Fconsulting%2Fconsulting"} ***!
   \**************************************************************************************/
@@ -221,7 +221,7 @@ var _utils = _interopRequireDefault(__webpack_require__(/*! ../../utils/utils.js
 //
 //
 //
-var _default = { data: function data() {return { InputBottom: 0, time: "1", input: "" };}, onLoad: function onLoad() {this.$data.time = _utils.default.formatTime(new Date());}, methods: { InputFocus: function InputFocus(e) {this.InputBottom = e.detail.height;}, InputBlur: function InputBlur(e) {this.InputBottom = 0;}, send: function send() {var x = this.input;console.log(x);} } };exports.default = _default;
+var _default = { data: function data() {return { message: [], InputBottom: 0, time: "1", input: "" };}, onLoad: function onLoad() {this.$data.time = _utils.default.formatTime(new Date());}, methods: { InputFocus: function InputFocus(e) {this.InputBottom = e.detail.height;}, InputBlur: function InputBlur(e) {this.InputBottom = 0;}, send: function send() {var x = this.input;this.$data.message.push(x);console.log(x);} } };exports.default = _default;
 
 /***/ }),
 
@@ -254,5 +254,5 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ })
 
-},[[102,"common/runtime","common/vendor"]]]);
+},[[116,"common/runtime","common/vendor"]]]);
 //# sourceMappingURL=../../../.sourcemap/mp-weixin/pages/consulting/consulting.js.map

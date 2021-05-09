@@ -52,7 +52,7 @@
 		height: 400rpx;
 		background-color: #F7F8FA;
 		padding-top: 15%;
-		padding-left: 35%;
+		padding-left: 39%;
 	}
 	
 	.Identification-messages{

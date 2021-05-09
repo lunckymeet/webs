@@ -40,6 +40,14 @@ Vue.component("Identification", Identification);
 import order from "./pages/order/order.vue";
 Vue.component("order", order);
 
+// 观察倒计时页面
+import countdown from "./pages/countdown/countdown.vue";
+Vue.component("countdown", countdown);
+
+// 关于页面
+import about from "./pages/about/about.vue";
+Vue.component("about", about);
+
 // 二级页面顶部导航栏
 import navTop from "./pages/navTop/navTop.vue";
 Vue.component("navtop", navTop);

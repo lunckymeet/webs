@@ -100,7 +100,9 @@
 				"usingComponents": {
 				  "van-field": "/wxcomponents/vant/dist/field/index",
 				  "van-dialog": "/wxcomponents/vant/dist/dialog/index",
-				  "van-datetime-picker": "/wxcomponents/vant/dist/datetime-picker/index"
+				  "van-datetime-picker": "/wxcomponents/vant/dist/datetime-picker/index",
+				  "van-button": "/wxcomponents/vant/dist/button/index",
+				  "van-action-sheet": "/wxcomponents/vant/dist/action-sheet/index"
 				}
 		    }
 		},
@@ -128,6 +130,28 @@
 					 "van-tabs": "/wxcomponents/vant/dist/tabs/index",
 					 "van-card": "/wxcomponents/vant/dist/card/index"
 				}
+		    }
+		}
+		,
+		{
+		    "path" : "pages/countdown/countdown",
+		    "style" :                                                                                    
+		    {
+		        "navigationBarTitleText": "",
+		        "enablePullDownRefresh": false,
+				"usingComponents": {
+					 "van-count-down": "/wxcomponents/vant/dist/count-down/index",
+					 "van-button": "/wxcomponents/vant/dist/button/index"
+				}
+		    }
+		}
+		,
+		{
+		    "path" : "pages/about/about",
+		    "style" :                                                                                    
+		    {
+		        "navigationBarTitleText": "",
+		        "enablePullDownRefresh": false
 		    }
 		}
 		,

@@ -141,31 +141,44 @@
 				</view>
 
 				<view class="vaccine-operation">
-					<!-- <view class="operation" v-for="(e, i) in operation" :key="i">
-						<view class="info" @click="skip()" :data-path="e.path">
-							<van-icon size="80rpx" :name="e.icon"></van-icon>
-							<view class="title" style="margin-top: 10rpx;">
-								{{e.title}}
-							</view>
-						</view>
-					</view> -->
 					
 					<view class="operation" >
 						<view class="info" @click="skip($event)" data-path="/pages/subscribe/subscribe">
-							<van-icon size="80rpx" name="/static/images/vaccine/appointment.png"></van-icon>
+							<van-icon size="80rpx" name="/static/images/vaccine/appoint1.png"></van-icon>
 							<view class="title" style="margin-top: 10rpx;">
-								预约
+								疫苗预约
 							</view>
 						</view>
 					</view>
+					
+					<view class="operation" >
+						<view class="info" @click="skip($event)" data-path="/pages/subscribe/subscribe">
+							<van-icon size="80rpx" name="/static/images/vaccine/appoint2.png"></van-icon>
+							<view class="title" style="margin-top: 10rpx;">
+								核酸检测预约
+							</view>
+						</view>
+					</view>
+					
+					<!-- 异常上报 -->
+					<view class="operation">
+						<view class="info" @click="skip($event)" data-path="/pages/abnormal/abnormal">
+							<van-icon size="80rpx" name="/static/images/vaccine/abnormal1.png"></van-icon>
+							<view class="title" style="margin-top: 10rpx;">
+								异常上报
+							</view>
+						</view>
+					</view>
+					
 					<view class="operation">
 						<view class="info" @click="scanQrCode()">
-							<van-icon size="80rpx" name="/static/images/vaccine/scan.png"></van-icon>
+							<van-icon size="80rpx" name="/static/images/vaccine/scan2.png"></van-icon>
 							<view class="title" style="margin-top: 10rpx;">
 								扫一扫
 							</view>
 						</view>
 					</view>
+					
 				</view>
 
 				<view class="vaccine-steps">

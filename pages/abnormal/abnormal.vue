@@ -1,51 +1,35 @@
 <template>
 	<view class="abnormal-wrap">
 		<navtop topTitle="异常上报"></navtop>
-		<van-cell-group>
-		  <van-field
-			label="姓名"
-		    :value="name"
-		    :border="false"
-		    bind:change="onChange"
-			input-align="left"
-		  />
-		</van-cell-group>
-		<van-cell-group>
-		  <van-field
-			label="异常疫苗"
-		    :value="name"
-		    :border="false"
-		    bind:change="onChange"
-			input-align="left"
-		  />
-		</van-cell-group>
-		
 		<view class="info">
 			<van-field
-			    :value="abnormalDate"
-				label="接种时间"
-			    placeholder="请选择时间"
+			    :value="personDate"
+				label="异常订单"
+			    placeholder="请出现异常的订单"
 				:readonly="true"
 			    :border="false"
 				@click-input="showDate"
-			    :change="onChange"
+				:change="onChange"
 			  />
+			  
 			  
 			  <van-dialog
 			    use-slot
 			    :show="dateShow"
 			  	:showConfirmButton="false"
 			  >
-			    <van-datetime-picker
-			      type="datetime"
-				  :value="currentDate"
-				  :min-date="minDate"
-				  :max-date="maxDate"
+			  
+				<van-action-sheet
+				  :actions="actions"
+				  cancel-text="取消"
+				  title="选择出现异常的订单"
 				  :formatter="dateFormate"
 				  @cancel="closeDate"
 				  @confirm="closeDate"
-			    />
-			  </van-dialog>
+				/>
+			
+			</van-dialog>
+			
 		</view>
 		
 		<van-cell-group>
@@ -59,6 +43,10 @@
 			input-align="left"
 		  />
 		</van-cell-group>
+		<view class="abnormal-button">
+			<van-button round type="info">确认上报</van-button>
+		</view>
+		
 	</view>
 </template>
 
@@ -66,55 +54,54 @@
 	export default {
 		data() {
 			return {
-				abnormalDate: "",
-				currentDate: new Date().getTime(),
-				minDate: new Date().getTime() - (60 * 60 * 30),
-				maxDate: new Date().getTime(),
-				dateShow: false
+				dateShow: false,
+				show: false,
+				actions: [
+				    {
+				        name: '选项一',
+						subname: '描述信息',
+						openType: 'share',
+				    },
+				    {
+				        name: '选项二',
+						subname: '描述信息',
+						openType: 'share',
+				    },
+				    {
+				        name: '选项三',
+				        subname: '描述信息',
+				        openType: 'share',
+				    },
+				    ],
 			}
 		},
 		methods: {
 			showDate: function(e) {
 				this.$data.dateShow = true;
 			},
+			onClose() {
+			    show = false;
+			},
+			
+			onSelect(event) {
+			    console.log(event.detail);
+			},
 			dateFormate: function(type, value) {
-				if(type === 'year') {
-					return value + '年';
-				}
 				
-				if(type === 'month') {
-					return value + '月';
-				}
-				
-				if(type === 'day') {
-					return value + '日';
-				}
-				
-				if(type === 'hour') {
-					return value + '时';
-				}
-				
-				if(type === 'minute') {
-					return value + '分';
-				}
 			},
 			closeDate: function(e) {
 				this.$data.dateShow = false;
-				
-				const date = new Date(e.detail);
-				const year = date.getFullYear() + "年";
-				const month = (date.getMonth() + 1) + "月";
-				const day = date.getDay() + "日";
-				const hour = date.getHours() + "时";
-				const minute = date.getMinutes() + "分";
-				
-				this.$data.abnormalDate = year + month + day + hour + minute;
 				console.log(e);
-			}
+			},
 		}
 	}
 </script>
 
 <style scoped>
-	
+	.abnormal-button{
+		width: 100%;
+		height: 250rpx;
+		padding-top: 15%;
+		padding-left: 35%;
+	}
 </style>

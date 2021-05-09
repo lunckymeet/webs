@@ -44,7 +44,36 @@
 <style scoped>
 	.order-vaccine{
 		width: 100%;
-		height: 200rpx;
-		font-size: 40rpx;
+		height: 150rpx;
+		background-color: #FFFFFF;
+		border-top: #F0F0F0 solid 1rpx;
+		padding-left: 30rpx;
+		display: flex;
+		padding-right: 30rpx;
 	}
+	
+	.order-vaccine-time{
+		font-size: 40rpx;
+		font-style: inherit;
+	}
+	
+	.order-vaccine-place{
+		font-size: 40rpx;
+		font-style: initial;
+		margin-left: 20rpx;
+	}
+	
+	.order-vaccine-name{
+		font-size: 40rpx;
+		font-style: initial;
+		margin-left: 20rpx;
+	}
+	
+	.order-vaccine-end{
+		font-size: 40rpx;
+		font-style: initial;
+		font-weight: 700;
+		margin-left: 20rpx;
+	}
+	
 </style>

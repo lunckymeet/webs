@@ -31,18 +31,19 @@
 				  link-type="navigateTo"
 				  url="/pages/order/order"
 				/>
-				<!-- <van-cell
-				  is-link
-				  title="反馈"
-				  link-type="navigateTo"
-				  url="/pages/dashboard/index"
-				/> -->
 				
 				<van-cell
 				  is-link
 				  title="关于"
 				  link-type="navigateTo"
 				  url="/pages/dashboard/index"
+				/>
+				
+				<van-cell
+				  is-link
+				  title="倒计时"
+				  link-type="navigateTo"
+				  url="/pages/countdown/countdown"
 				/>
 				
 				<view class="feedback">
@@ -106,14 +107,13 @@
 	.person-img-right {
 		width: 100%;
 		height: 20%;
-		padding: 5% 5% 5% 7%;
+		padding: 5% 5% 5% 5%;
 		float: right;
 		text-align: center;
 		font-size: 30rpx;
 		/* padding-top: 20%;
 		padding-left: 20%; */
-		color: #888888;
-		font-weight: bolder;
+		color: #a9a9a9;
 	}
 	
 	.feedback{
@@ -133,7 +133,7 @@
 	 margin: 0px;
 	 line-height: 1.6;
 	 border-radius: 0;
-	 font-size: 32rpx;
+	 font-size: 30rpx;
 	 color: #323233;
 	}
 	 

@@ -1,7 +1,34 @@
 
 .order-vaccine.data-v-127632e4{
 	width: 100%;
-	height: 200rpx;
-	font-size: 40rpx;
+	height: 150rpx;
+	background-color: #FFFFFF;
+	border-top: #F0F0F0 solid 1rpx;
+	padding-left: 30rpx;
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: flex;
+	padding-right: 30rpx;
 }
+.order-vaccine-time.data-v-127632e4{
+	font-size: 40rpx;
+	font-style: inherit;
+}
+.order-vaccine-place.data-v-127632e4{
+	font-size: 40rpx;
+	font-style: initial;
+	margin-left: 20rpx;
+}
+.order-vaccine-name.data-v-127632e4{
+	font-size: 40rpx;
+	font-style: initial;
+	margin-left: 20rpx;
+}
+.order-vaccine-end.data-v-127632e4{
+	font-size: 40rpx;
+	font-style: initial;
+	font-weight: 700;
+	margin-left: 20rpx;
+}
+
 

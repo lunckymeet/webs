@@ -1,6 +1,6 @@
 (global["webpackJsonp"] = global["webpackJsonp"] || []).push([["pages/classkind/classkind"],{
 
-/***/ 110:
+/***/ 126:
 /*!************************************************************************************!*\
   !*** D:/software/HBuilder/health/main.js?{"page":"pages%2Fclasskind%2Fclasskind"} ***!
   \************************************************************************************/
@@ -328,5 +328,5 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ })
 
-},[[110,"common/runtime","common/vendor"]]]);
+},[[126,"common/runtime","common/vendor"]]]);
 //# sourceMappingURL=../../../.sourcemap/mp-weixin/pages/classkind/classkind.js.map

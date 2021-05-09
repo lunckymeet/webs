@@ -39,11 +39,4 @@
 	-webkit-align-items: center;
 	        align-items: center;
 }
-.vaccine-abnormal{
-	position: absolute;
-	bottom: 120rpx;
-	right: 0rpx;
-	/* background-color: #007AFF; */
-	z-index: 99;
-}
 

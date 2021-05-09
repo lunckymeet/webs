@@ -2,7 +2,7 @@
 	<view class="subscribe-wrap">
 		<navtop topTitle="预约"></navtop>
 		<view class="subscribe-context">
-		<van-tabs swipeable>
+		<van-tabs swipeable class="tabs">
 		  <van-tab title="个人">
 			  <view class="info-list person">
 			  	<view class="info">
@@ -269,5 +269,9 @@
 		height: 200rpx;
 		padding-left: 38%;
 		padding-top: 10%;
+	}
+	
+	.tabs{
+		line-width: 50%;
 	}
 </style>

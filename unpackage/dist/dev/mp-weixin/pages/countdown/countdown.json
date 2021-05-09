@@ -1,0 +1,8 @@
+{
+  "navigationBarTitleText": "",
+  "enablePullDownRefresh": false,
+  "usingComponents": {
+    "van-count-down": "/wxcomponents/vant/dist/count-down/index",
+    "van-button": "/wxcomponents/vant/dist/button/index"
+  }
+}

@@ -5796,6 +5796,8 @@ scroll-view.cu-steps .cu-item {
 
 
 
+
+
 /* page{
   padding-bottom: 100upx;
 } */
@@ -5828,14 +5830,13 @@ scroll-view.cu-steps .cu-item {
 .person-img-right.data-v-390a77b4 {
 	width: 100%;
 	height: 20%;
-	padding: 5% 5% 5% 7%;
+	padding: 5% 5% 5% 5%;
 	float: right;
 	text-align: center;
 	font-size: 30rpx;
 	/* padding-top: 20%;
 	padding-left: 20%; */
-	color: #888888;
-	font-weight: bolder;
+	color: #a9a9a9;
 }
 .feedback.data-v-390a77b4{
 	width: 90%;
@@ -5853,7 +5854,7 @@ scroll-view.cu-steps .cu-item {
  margin: 0px;
  line-height: 1.6;
  border-radius: 0;
- font-size: 32rpx;
+ font-size: 30rpx;
  color: #323233;
 }
 .button.data-v-390a77b4::after {
@@ -5863,12 +5864,20 @@ scroll-view.cu-steps .cu-item {
 
 
 
+.abnormal-button.data-v-3ffea786{
+	width: 100%;
+	height: 250rpx;
+	padding-top: 15%;
+	padding-left: 35%;
+}
+
+
 .Identification-file.data-v-d5f939f4{
 	width: 100%;
 	height: 400rpx;
 	background-color: #F7F8FA;
 	padding-top: 15%;
-	padding-left: 35%;
+	padding-left: 39%;
 }
 .Identification-messages.data-v-d5f939f4{
 	width: 100%;
@@ -5892,8 +5901,39 @@ scroll-view.cu-steps .cu-item {
 
 .order-vaccine.data-v-127632e4{
 	width: 100%;
-	height: 200rpx;
+	height: 150rpx;
+	background-color: #FFFFFF;
+	border-top: #F0F0F0 solid 1rpx;
+	padding-left: 30rpx;
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: flex;
+	padding-right: 30rpx;
+}
+.order-vaccine-time.data-v-127632e4{
 	font-size: 40rpx;
+	font-style: inherit;
+}
+.order-vaccine-place.data-v-127632e4{
+	font-size: 40rpx;
+	font-style: initial;
+	margin-left: 20rpx;
+}
+.order-vaccine-name.data-v-127632e4{
+	font-size: 40rpx;
+	font-style: initial;
+	margin-left: 20rpx;
+}
+.order-vaccine-end.data-v-127632e4{
+	font-size: 40rpx;
+	font-style: initial;
+	font-weight: 700;
+	margin-left: 20rpx;
+}
+
+
+
+.countdown-end.data-v-3881d12c{
 }
 
 

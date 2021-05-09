@@ -1,6 +1,6 @@
 (global["webpackJsonp"] = global["webpackJsonp"] || []).push([["pages/person/person"],{
 
-/***/ 104:
+/***/ 118:
 /*!******************************************************************************!*\
   !*** D:/software/HBuilder/health/main.js?{"page":"pages%2Fperson%2Fperson"} ***!
   \******************************************************************************/
@@ -187,6 +187,7 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
 var _default =
 {
   data: function data() {
@@ -235,5 +236,5 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ })
 
-},[[104,"common/runtime","common/vendor"]]]);
+},[[118,"common/runtime","common/vendor"]]]);
 //# sourceMappingURL=../../../.sourcemap/mp-weixin/pages/person/person.js.map

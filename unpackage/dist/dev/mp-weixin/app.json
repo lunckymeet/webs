@@ -10,6 +10,8 @@
     "pages/abnormal/abnormal",
     "pages/Identification/Identification",
     "pages/order/order",
+    "pages/countdown/countdown",
+    "pages/about/about",
     "pages/navTop/navTop",
     "pages/classkind/classkind",
     "pages/position/position",
@@ -38,8 +40,10 @@
     "abnormal": "/pages/abnormal/abnormal",
     "identification": "/pages/Identification/Identification",
     "order": "/pages/order/order",
+    "countdown": "/pages/countdown/countdown",
+    "about": "/pages/about/about",
     "navtop": "/pages/navTop/navTop",
     "pagetop": "/pages/navTop/pageTop"
   },
-  "sitemapLocation": "sitemap48.json"
+  "sitemapLocation": "sitemap37.json"
 }
