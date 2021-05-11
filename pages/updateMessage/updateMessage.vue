@@ -97,6 +97,17 @@
 		},
 		methods: {
 		},
+		created:function(){
+			const app = getApp();
+			this.$data.name = app.globalData.userInfo.userName == null ? "" : app.globalData.userInfo.userName;
+			this.$data.address = app.globalData.userInfo.userAddress == null ? "" : app.globalData.userInfo.userAddress;
+			this.$data.phone = app.globalData.userInfo.userPhone == null ? "" : app.globalData.userInfo.userPhone;
+			this.$data.idcard = app.globalData.userInfo.userIdCard == null ? "" : app.globalData.userInfo.userIdCard;
+			const sex = app.globalData.userInfo.userSex == null ? "" : app.globalData.userInfo.userSex;
+			if(sex != null && sex != "") {
+				this.$data.gender = sex == "1" ? "男" : "女";
+			}
+		}
 	}
 </script>
 

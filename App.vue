@@ -152,7 +152,7 @@
 						success:function(e){
 							console.log("用户信息",e);
 							if(e.data.msg) {
-								data.userInfo = e.data;
+								data.userInfo = e.data.data;
 							} else {
 								data.userInfo = null;
 							}
