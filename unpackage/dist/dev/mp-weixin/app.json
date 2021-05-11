@@ -45,9 +45,5 @@
     "navtop": "/pages/navTop/navTop",
     "pagetop": "/pages/navTop/pageTop"
   },
-<<<<<<< HEAD
-  "sitemapLocation": "sitemap37.json"
-=======
-  "sitemapLocation": "sitemap.json"
->>>>>>> cde70ce71fb90d57ce8e210a19a674eb9a75c0ef
+  "sitemapLocation": "sitemap94.json"
 }

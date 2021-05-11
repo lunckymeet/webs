@@ -3,6 +3,7 @@
 		globalData: {
 			appid: "wxee1df51d9c15e8da", // 微信小程序的appid
 			secret: "d5f49efd712055eacb4809e19b388daf", // 微信小程序的secret
+			openid: "", // 用户openid
 			accessToken: "", // AccessToken
 			navHeight: 0, // 导航栏高度
 			statuHeight: 0, // 状态栏高度
@@ -61,16 +62,16 @@
 			
 			
 			// 定时获取AccessToken
-			/*
+			
 			that.getAccessToken();
 			const accessTokenTimer = setInterval(e => {
 				that.getAccessToken();
 			}, 7200000);
-			*/
+			
 			
 			
 			// 登录获取code，向后台发送请求换取openid
-			/*
+			
 			uni.login({
 				success: (e) => {
 					
@@ -84,12 +85,13 @@
 							grant_type: "authorization_code"
 						},
 						success: (e) => {
+							data.openid = e.data.openid;
 							console.log("成功获取到用户openid", e);
 						}
 					})
 				}
 			});
-			*/
+			
 			
 			/* 
 				获取用户授权
@@ -133,10 +135,37 @@
 					that.getUserInfo();
 				} */
 			  }
+			  
 			});
 			
 			
-			
+			// 获取用户信息
+			let userInfoTime = setInterval(function() {
+				console.log(data.openid)
+				if(data.openid != null && data.openid != '') {
+					uni.request({
+						url: "https://health.ymhdev.xyz:9999/user/select",
+						method: "GET",
+						data: {
+							openid: data.openid
+						},
+						success:function(e){
+							console.log("用户信息",e);
+							if(e.data.msg) {
+								data.userInfo = e.data;
+							} else {
+								data.userInfo = null;
+							}
+							console.log(e.data.msg.length)
+							console.log(data.userInfo);
+						},
+						fail:function(e){
+							console.log(e);
+						}
+					});
+					clearInterval(userInfoTime);
+				}
+			}, 1000);
 			
 		},
 		onShow: function() {

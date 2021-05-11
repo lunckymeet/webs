@@ -33,8 +33,7 @@
 	content: "";
 	width: 8rpx;
 	height: 30rpx;
-	-webkit-border-radius: 10rpx 0 0 10rpx;
-	        border-radius: 10rpx 0 0 10rpx;
+	border-radius: 10rpx 0 0 10rpx;
 	position: absolute;
 	background-color: currentColor;
 	top: 0;
