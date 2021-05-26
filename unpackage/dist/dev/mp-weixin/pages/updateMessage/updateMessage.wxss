@@ -4,5 +4,11 @@
 	position: absolute;
 	bottom: 200rpx;
 }
+.codeMessage.data-v-5dc3a944{
+	background-color: #FFFFFF;
+	font-size: 30rpx;
+	text-align: center;
+	color: #07C160;
+}
 
 

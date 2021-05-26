@@ -4,7 +4,7 @@
   "usingComponents": {
     "van-field": "/wxcomponents/vant/dist/field/index",
     "van-dialog": "/wxcomponents/vant/dist/dialog/index",
-    "van-datetime-picker": "/wxcomponents/vant/dist/datetime-picker/index",
+    "van-picker": "/wxcomponents/vant/dist/picker/index",
     "van-button": "/wxcomponents/vant/dist/button/index",
     "van-action-sheet": "/wxcomponents/vant/dist/action-sheet/index"
   }

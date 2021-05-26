@@ -5,6 +5,7 @@
 			<!-- <van-uploader :file-list="fileList" accept="image" :capture="['camera']" :max-size="3096" :max-count="1" :sizeType="['original']" @after-read="getImage" :preview-image="true"/> -->
 			<van-uploader :file-list="fileList" :deletable="true" :capture="['camera']" accept="image" :sizeType="['original']" :preview-full-image="true" :max-count="1" preview-size="120rpx" :preview-image="true" @after-read="getImage" />
 		</view>
+		<view class="careful">注：身份证照片不能超过4MB</view>
 		<view class="Identification-messages" v-if="idInfo != null">
 			<view class="Identification-m">姓名：{{idInfo.name}}</view>
 			<view class="Identification-m">性别：{{idInfo.sex}}</view>
@@ -15,6 +16,7 @@
 		<view class="Identification-button" v-if="idInfo != null">
 			<van-button round type="info" @click="updateUserInfo">信息确认</van-button>
 		</view>
+		<view class="idMessage">{{message}}</view>
 	</view>
 </template>
 
@@ -23,7 +25,8 @@
 		data() {
 			return {
 				fileList: [],
-				idInfo: null
+				idInfo: null,
+				message:""
 			}
 		},
 		methods: {
@@ -85,9 +88,11 @@
 					},
 					success:function(e){
 						console.log(e);
+						that.$data.message = "修改成功！"
 					},
 					fail:function(e){
 						console.log(e);
+						that.$data.message = "修改失败！"
 					}
 				});
 			}
@@ -96,6 +101,11 @@
 </script>
 
 <style scoped>
+	.careful{
+		text-align: center;
+		font-size: 40rpx;
+		color: #DEE6EE;
+	}
 	.Identification-file {
 		width: 100%;
 		height: 400rpx;
@@ -123,5 +133,12 @@
 		height: 250rpx;
 		padding-top: 15%;
 		padding-left: 35%;
+	}
+	
+	.idMessage{
+		font-size: 50rpx;
+		font-weight: 500;
+		color: #DD524D;
+		text-align: center;
 	}
 </style>

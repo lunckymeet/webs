@@ -29,7 +29,7 @@
 											{{data.gntotal}}
 										</view>
 										<view class="text data-change">
-											1
+											10
 										</view>
 									</view>
 								</view>
@@ -42,7 +42,7 @@
 											{{data.curetotal}}
 										</view>
 										<view class="text data-change">
-											1
+											8
 										</view>
 									</view>
 								</view>
@@ -68,7 +68,7 @@
 											{{data.econNum}}
 										</view>
 										<view class="text data-change">
-											1
+											4
 										</view>
 									</view>
 								</view>
@@ -88,11 +88,11 @@
 											累计确诊
 										</view>
 										<view class="text data-num">
-											1
+											{{data.gntotal+12}}
 										</view>
 										<view class="text data-change">
 											<text class="cuIcon-add"></text>
-											1
+											1568
 										</view>
 									</view>
 								</view>
@@ -102,10 +102,10 @@
 											累计治愈
 										</view>
 										<view class="text data-num">
-											1
+											{{data.curetotal+33}}
 										</view>
 										<view class="text data-change">
-											1
+											6809
 										</view>
 									</view>
 								</view>
@@ -115,10 +115,10 @@
 											累计死亡
 										</view>
 										<view class="text data-num">
-											1
+											{{data.deathtotal+34}}
 										</view>
 										<view class="text data-change">
-											1
+											5773
 										</view>
 									</view>
 								</view>
@@ -128,10 +128,10 @@
 											现有确诊
 										</view>
 										<view class="text data-num">
-											1
+											{{data.econNum+29}}
 										</view>
 										<view class="text data-change">
-											1
+											3769
 										</view>
 									</view>
 								</view>
@@ -152,7 +152,7 @@
 					</view>
 					
 					<view class="operation" >
-						<view class="info" @click="skip($event)" data-path="/pages/subscribe/subscribe">
+						<view class="info" @click="skip($event)" data-path="/pages/nappointment/nappointment">
 							<van-icon size="80rpx" name="/static/images/vaccine/appoint2.png"></van-icon>
 							<view class="title" style="margin-top: 10rpx;">
 								核酸检测预约
@@ -181,10 +181,11 @@
 					
 				</view>
 
-				<view class="vaccine-steps">
+				<view class="vaccine-steps" v-for="i in dates">
 					<scroll-view scroll-x class="bg-white steps response cu-steps steps-bottom" :scroll-into-view="'scroll-' + scroll"
 						scroll-with-animation>
-						<view class="cu-item padding-lr-xl" :class="index>scroll?'':'text-blue'" v-for="(item,index) in 10" :key="index" :id="'scroll-' + index">
+						<view class="vaccine-title">{{i.orderHospitalP}} {{i.vaccine.vaccineName}}</view>
+						<view class="cu-item padding-lr-xl" :class="index>scroll?'':'text-blue'" v-for="(item,index) in 6" :key="index" :id="'scroll-' + index">
 							<text :class="'cuIcon-homefill'"></text> 预约
 						</view>
 					</scroll-view>
@@ -286,6 +287,7 @@
 				topHeight: 580, // 顶部高度
 				topContextHeight: 0, // 顶部内容高度
 				data: null, // 疫情数据
+				dates: [],
 				// operation: [
 				// 	{
 				// 		icon: "/static/images/vaccine/appointment.png",
@@ -350,20 +352,44 @@
 			this.$data.navHeight = app.globalData.navHeight;
 			this.$data.topContextHeight = (this.$data.topHeight / app.globalData.rpxRatio) - app.globalData.navHeight;
 			
-			/*
+			
+			// uni.request({
+			// 	url: "https://interface.sina.cn/news/wap/fymap2020_data.d.json",
+			// 	method: "GET",
+			// 	timeout: 6000,
+			// 	success: (e) => {
+			// 		console.log("成功获取到疫情数据", e.data)
+			// 		that.$data.data = e.data.data;
+			// 	},
+			// 	fail: (e) => {
+			// 		console.log("获取到疫情数据失败", e)
+			// 	}
+			// })
+			
 			uni.request({
-				url: "https://interface.sina.cn/news/wap/fymap2020_data.d.json",
-				method: "GET",
-				timeout: 6000,
-				success: (e) => {
-					console.log("成功获取到疫情数据", e.data)
-					that.$data.data = e.data.data;
-				},
-				fail: (e) => {
-					console.log("获取到疫情数据失败", e)
-				}
+						url: "https://health.ymhdev.xyz:9999/personO/select",
+						method: "GET",
+						header: {
+							"content-type": "application/x-www-form-urlencoded"
+						},
+						data: {
+							user: app.globalData.openid,
+							kind: "1"
+						},
+						success: (e) => {
+							console.log(e)
+							console.log(e.data)
+							for(let i = 0;i < e.data.msg.length;i++){
+								if(e.data.msg[i].orderStatusP < 6){
+									console.log(e.data.msg[i]);
+									this.$data.dates.push(e.data.msg[i]);
+								}
+							}
+							
+							console.log(this.$data.dates);
+						}
 			})
-			*/
+			
 		}
 	}
 </script>

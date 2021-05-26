@@ -11,7 +11,6 @@
 				  placeholder="请输入搜索关键词"
 					/>
 				</view>
-			
 				<view class="fuc">
 					<view class="message-classification" @click="skip($event)" data-path="/pages/classkind/classkind">
 						<van-icon size="80rpx" name="/static/images/vaccine/classkind.png"></van-icon>
@@ -26,7 +25,7 @@
 						</view>
 					</view>
 				</view>
-				<view class="message-information">					<view class="message-info" v-for="i in 5">					    <view class="info">					    	<view class="title">					    		哈哈哈哈					    	</view>					    						    	<view class="desc">					    		哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈					    	</view>					    						    	<view class="introduce">					    		<view class="date">					    			<text class="cuIcon-timefill"></text>					    			2021-02-10					    		</view>					    							    		<view class="from">					    			来源于中华新闻网					    		</view>					    							    		<view class="eye">					    			<text class="cuIcon-attentionfavorfill"></text>1000					    		</view>					    	</view>					    </view>					</view>				</view>
+				<view class="message-information">					<view class="message-info" v-for="i in taboos">					    <view class="info">					    	<view class="title">					    		{{i.vaccine.vaccineName}}					    	</view>					    						    	<view class="desc">					    		{{i.tabooContext}}					    	</view>					    						    	<view class="introduce">					    		<view class="date">					    			<text class="cuIcon-timefill"></text>					    			{{i.tabooDate}}					    		</view>					    							    		<view class="from">					    			{{i.tabooSource}}					    		</view>					    							    		<view class="eye">					    			<text class="cuIcon-attentionfavorfill"></text>{{i.tabooEye}}					    		</view>					    	</view>					    </view>					</view>				</view>
 			</view>
 		</view>
 	</scroll-view>
@@ -36,7 +35,7 @@
 	export default {
 		data() {
 			return {
-				
+				taboos:[],
 				
 			}
 		},
@@ -45,7 +44,18 @@
 				uni.navigateTo({
 					url:e.currentTarget.dataset.path
 				})
+			},
+			
+		},
+		created:function(){
+			const that = this;
+			const appData = getApp().globalData;
+			const app = getApp();
+			
+			for(let i = 0;i < appData.taboo.length;i++){
+				this.$data.taboos.push(appData.taboo[i]);
 			}
+			
 		}
 	}
 </script>
@@ -134,6 +144,8 @@
 		height: 40%;
 		font-size: 26rpx;
 		color: #777;
+		text-overflow: ellipsis;
+		white-space: nowrap;
 	}
 	.message-info > .info > .introduce {
 		width: 100%;

@@ -3,6 +3,7 @@
   "enablePullDownRefresh": false,
   "usingComponents": {
     "van-uploader": "/wxcomponents/vant/dist/uploader/index",
-    "van-button": "/wxcomponents/vant/dist/button/index"
+    "van-button": "/wxcomponents/vant/dist/button/index",
+    "van-toast": "/wxcomponents/vant/dist/toast/index"
   }
 }

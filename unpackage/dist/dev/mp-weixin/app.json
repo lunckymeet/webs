@@ -2,6 +2,7 @@
   "pages": [
     "pages/index/index",
     "pages/subscribe/subscribe",
+    "pages/nappointment/nappointment",
     "pages/message/message",
     "pages/consulting/consulting",
     "pages/vaccine/vaccine",
@@ -33,6 +34,7 @@
     "tops": "/colorui/components/cu-custom",
     "vaccine": "/pages/vaccine/vaccine",
     "message": "/pages/message/message",
+    "nappointment": "/pages/nappointment/nappointment",
     "classkind": "/pages/classkind/classkind",
     "update-message": "/pages/updateMessage/updateMessage",
     "consulting": "/pages/consulting/consulting",
@@ -44,6 +46,5 @@
     "about": "/pages/about/about",
     "navtop": "/pages/navTop/navTop",
     "pagetop": "/pages/navTop/pageTop"
-  },
-  "sitemapLocation": "sitemap.json"
+  }
 }

@@ -3,33 +3,23 @@
 		<navtop topTitle="异常上报"></navtop>
 		<view class="info">
 			<van-field
-			    :value="personDate"
+			    :value="personVaccine"
 				label="异常订单"
-			    placeholder="请出现异常的订单"
+			    placeholder="请选择出现异常的疫苗记录"
 				:readonly="true"
 			    :border="false"
-				@click-input="showDate"
-				:change="onChange"
+				:required="true"
+				@click-input="showVaccine"
+			    :change="onChange"
 			  />
-			  
 			  
 			  <van-dialog
 			    use-slot
-			    :show="dateShow"
-			  	:showConfirmButton="false"
+			    :show="vaccineShow"
+			    :showConfirmButton="false"
 			  >
-			  
-				<van-action-sheet
-				  :actions="actions"
-				  cancel-text="取消"
-				  title="选择出现异常的订单"
-				  :formatter="dateFormate"
-				  @cancel="closeDate"
-				  @confirm="closeDate"
-				/>
-			
-			</van-dialog>
-			
+			    <van-picker :columns="vaccineTime" :show-toolbar="true" @confirm="selectVaccine" @cancel="selectVaccine" @change="hospital" />
+			  </van-dialog>
 		</view>
 		
 		<van-cell-group>
@@ -56,44 +46,52 @@
 			return {
 				dateShow: false,
 				show: false,
-				actions: [
-				    {
-				        name: '选项一',
-						subname: '描述信息',
-						openType: 'share',
-				    },
-				    {
-				        name: '选项二',
-						subname: '描述信息',
-						openType: 'share',
-				    },
-				    {
-				        name: '选项三',
-				        subname: '描述信息',
-				        openType: 'share',
-				    },
-				    ],
+				vaccines:null,
+				vaccineShow: false,
+				vaccineTime:null,
+				personVaccine:""
 			}
 		},
-		methods: {
-			showDate: function(e) {
-				this.$data.dateShow = true;
-			},
-			onClose() {
-			    show = false;
-			},
-			
-			onSelect(event) {
-			    console.log(event.detail);
-			},
-			dateFormate: function(type, value) {
+		onLoad: function () {
+			let user = this.$data.userInfo;
+				const app = getApp();
+				console.log(app)
+				uni.request({
+							url: "https://health.ymhdev.xyz:9999/personO/select",
+							method: "GET",
+							header: {
+								"content-type": "application/x-www-form-urlencoded"
+							},
+							data: {
+								user: app.globalData.openid,
+								kind: "0"
+							},
+							success: (e) => {
+								console.log(e)
+								console.log(e.data.msg)
+								this.$data.vaccines = e.data.msg;
+								for(let i = 0;i<this.$data.vaccines.length;i++){
+									this.$data.vaccineTime[i] = this.$data.vaccines[i].orderDateP;
+								}
+								console.log(this.$data.vaccineTime);
+							}
+				});
 				
 			},
-			closeDate: function(e) {
-				this.$data.dateShow = false;
-				console.log(e);
+		methods: {
+			// 显示疫苗选择框
+			showVaccine: function(e) {
+				this.$data.vaccineShow = true;
 			},
+			selectVaccine: function(e) {
+				this.$data.personVaccine = e.detail.value;
+				this.$data.vaccineShow = false;
+			},
+			hospital: (e) => {
+				console.log(e);
+			}
 		}
+		
 	}
 </script>
 

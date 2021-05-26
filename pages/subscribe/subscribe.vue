@@ -1,6 +1,6 @@
 <template>
 	<view class="subscribe-wrap">
-		<navtop topTitle="预约"></navtop>
+		<navtop topTitle="疫苗预约"></navtop>
 		<view class="subscribe-context">
 		<van-tabs swipeable class="tabs">
 		  <van-tab title="个人">
@@ -56,11 +56,33 @@
 				
 				<view class="info">
 					<van-field
+					    :value="personVaccine"
+						label="接种疫苗"
+					    placeholder="请选择接种的疫苗"
+						:readonly="true"
+					    :border="false"
+						:required="true"
+						@click-input="showVaccine"
+					    :change="onChange"
+					  />
+					  
+					  <van-dialog
+					    use-slot
+					    :show="vaccineShow"
+					    :showConfirmButton="false"
+					  >
+					    <van-picker :columns="vaccinesname" :show-toolbar="true" @confirm="selectVaccine" @cancel="selectVaccine" @change="hospital" />
+					  </van-dialog>
+				</view>
+				
+				<view class="info">
+					<van-field
 					    :value="personName"
 					    label="姓名"
 					    type="textarea"
 					    placeholder="请输入姓名"
 					    :border="false"
+						disabled
 						@change="getName"
 					  />
 				</view>
@@ -72,6 +94,7 @@
 					    type="textarea"
 					    placeholder="请输入电话号码"
 					    :border="false"
+						disabled
 						@change="getPhone"
 					  />
 				</view>
@@ -83,14 +106,15 @@
 					    type="textarea"
 					    placeholder="请输入家庭住址"
 					    :border="false"
+						disabled
 						@change="getAddress"
 					  />
 				</view>
 				
 				<view class="info-button">
-					<van-button round type="info" name="个人预约">确认预约</van-button>
+					<van-button round type="info" name="个人预约" @click="addVaccineOrder">确认预约</van-button>
 				</view>
-				
+				<view class="subscribe-message">{{message}}</view>
 			  </view>
 			  
 		  </van-tab>
@@ -102,6 +126,7 @@
 			  		    :value="personName"
 			  		    label="姓名"
 			  		    type="textarea"
+						disabled
 			  		    placeholder="请输入姓名"
 			  		    :border="false"
 			  			@change="getName"
@@ -113,6 +138,7 @@
 			  		    :value="personPhone"
 			  		    label="电话号码"
 			  		    type="textarea"
+						disabled
 			  		    placeholder="请输入电话号码"
 			  		    :border="false"
 			  			@change="getPhone"
@@ -125,6 +151,7 @@
 			  		    label="家庭住址"
 			  		    type="textarea"
 			  		    placeholder="请输入家庭住址"
+						disabled
 			  		    :border="false"
 			  			@change="getAddress"
 			  		  />
@@ -141,7 +168,7 @@
 					  />
 				</view>
 			  	<view class="info-button">
-					<van-button round type="info" name="团体预约">确认预约</van-button>
+					<van-button round type="info" name="团体预约" @click="addTeamOrder">确认预约</van-button>
 				</view>
 			  </view>
 		  </van-tab>
@@ -157,18 +184,79 @@
 		data() {
 			return {
 				hospitalShow: false, // 选择医院是否显示
+				vaccineShow: false,
 				dateShow: false, // 选择时间是否显示
 				hospitals: [],
+				vaccines:[],
 				personHospital: "", // 个人预约医院
 				personDate: null, // 个人预约时间
 				minDate: new Date().getTime() + (60 * 60 * 2),
 				maxDate: new Date().getTime() + (60 * 60 * 24 * 1000 * 30),
 				currentDate: new Date().getTime(),
-				personName: ""
-				
+				personName: "",
+				personPhone:"",
+				personAddress:"",
+				personVaccine:"",
+				message:"",
+				vaccinesname:[],
+				vaccineid:null
 			}
 		}, 
 		methods: {
+			addVaccineOrder: function () {
+				const that = this;
+				const app = getApp().globalData;
+				console.log(that.$data.personDate);
+				uni.request({
+					url: "https://health.ymhdev.xyz:9999/personO/add",
+					header: {
+						"content-type": "application/x-www-form-urlencoded"
+					},
+					method: "POST",
+					data: {
+						hospital: that.$data.personHospital,
+						date: that.$data.personDate,
+						vaccine: that.$data.vaccineid,
+						user: app.openid,
+						kind: 0
+					},
+					success:function(e){
+						console.log(e);
+						that.$data.message = "预约成功！"
+					},
+					fail:function(e){
+						console.log(e);
+						that.$data.message = "预约失败！"
+					}
+				});
+			},
+			addTeamOrder: function () {
+				const that = this;
+				const app = getApp().globalData;
+				console.log(that.$data.personDate);
+				uni.request({
+					url: "https://health.ymhdev.xyz:9999/personO/add",
+					header: {
+						"content-type": "application/x-www-form-urlencoded"
+					},
+					method: "POST",
+					data: {
+						hospital: that.$data.personHospital,
+						date: that.$data.personDate,
+						vaccine: that.$data.vaccineid,
+						user: app.openid,
+						kind: 0
+					},
+					success:function(e){
+						console.log(e);
+						that.$data.message = "预约成功！"
+					},
+					fail:function(e){
+						console.log(e);
+						that.$data.message = "预约失败！"
+					}
+				});
+			},
 			PickerChange: (e) => {
 				this.index = e.detail.value
 			},
@@ -179,9 +267,22 @@
 			showHospital: function(e) {
 				this.$data.hospitalShow = true;
 			},
+			// 显示疫苗选择框
+			showVaccine: function(e) {
+				this.$data.vaccineShow = true;
+			},
 			selectHospital: function(e) {
 				this.$data.personHospital = e.detail.value;
 				this.$data.hospitalShow = false;
+			},
+			selectVaccine: function(e) {
+				for(let i = 0;i<this.$data.vaccines.length;i++){
+					if(e.detail.value == this.$data.vaccines[i].vaccineName){
+						this.$data.vaccineid = this.$data.vaccines[i].vaccineId;
+					}
+				}
+				this.$data.personVaccine = e.detail.value;
+				this.$data.vaccineShow = false;
 			},
 			showDate: function(e) {
 				this.$data.dateShow = true;
@@ -230,6 +331,7 @@
 		created:function(){
 			const that = this;
 			const appData = getApp().globalData;
+			const app = getApp();
 			// 获取附近医院列表
 			new position.AMapWX({key: appData.areaKey}).getInputtips({
 				keywords: "医院",
@@ -247,6 +349,16 @@
 				        console.log(info)
 				      }
 			});
+			
+			//获取用户信息
+			this.$data.personName = app.globalData.userInfo.userName == null ? "" : app.globalData.userInfo.userName;
+			this.$data.personPhone = app.globalData.userInfo.userPhone == null ? "" : app.globalData.userInfo.userPhone;
+			this.$data.personAddress = app.globalData.userInfo.userAddress == null ? "" : app.globalData.userInfo.userAddress;
+			for(let i = 0;i < appData.vaccine.length;i++){
+				this.$data.vaccines.push(appData.vaccine[i]);
+				this.$data.vaccinesname.push(appData.vaccine[i].vaccineName);
+			}
+			
 		}
 	}
 </script>

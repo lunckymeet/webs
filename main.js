@@ -12,6 +12,10 @@ Vue.component("vaccine", vaccine);
 import message from "./pages/message/message.vue";
 Vue.component("message", message);
 
+// 核酸检测预约页面
+import nappointment from "./pages/nappointment/nappointment.vue";
+Vue.component("nappointment", nappointment);
+
 // 分类
 import classkind from "./pages/classkind/classkind.vue";
 Vue.component("classkind", classkind);

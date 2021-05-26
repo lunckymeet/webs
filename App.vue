@@ -13,6 +13,8 @@
 			areaKey: "1e279352f502efae4ebfe4e90061042f", // 高德KEY
 			userInfo: null, // 用户信息
 			city: "", // 当前城市
+			vaccine:[],//疫苗信息
+			taboo:[]//禁忌信息
 		},
 		methods: {
 			
@@ -136,6 +138,32 @@
 				} */
 			  }
 			  
+			});
+			
+			//获取所有疫苗信息
+			uni.request({
+				url: "https://health.ymhdev.xyz:9999/vaccine/select",
+				method: "GET",
+				success:function(e){
+					console.log("疫苗信息",e);
+					data.vaccine = e.data.msg;
+				},
+				fail:function(e){
+					console.log(e);
+				}
+			});
+			
+			//获取所有禁忌信息
+			uni.request({
+				url: "https://health.ymhdev.xyz:9999/taboo/select",
+				method: "GET",
+				success:function(e){
+					console.log("禁忌信息",e);
+					data.taboo = e.data.msg;
+				},
+				fail:function(e){
+					console.log(e);
+				}
 			});
 			
 			
