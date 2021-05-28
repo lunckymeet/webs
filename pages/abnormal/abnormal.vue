@@ -31,12 +31,13 @@
 		    autosize
 		    :border="false"
 			input-align="left"
+			:confirm="change"
 		  />
 		</van-cell-group>
 		<view class="abnormal-button">
-			<van-button round type="info">确认上报</van-button>
+			<van-button round type="info" @click="addAbnormal">确认上报</van-button>
 		</view>
-		
+		<view class="subscribe-message">{{mmmm}}</view>
 	</view>
 </template>
 
@@ -48,8 +49,11 @@
 				show: false,
 				vaccines:null,
 				vaccineShow: false,
-				vaccineTime:null,
-				personVaccine:""
+				vaccineTime:["2021年5月27日 接种新冠疫苗","2021年5月28日 接种新冠疫苗","2021年5月29日 接种新冠疫苗"],
+				personVaccine:"",
+				message:"",
+				mmmm:"",
+				vaid:"1"
 			}
 		},
 		onLoad: function () {
@@ -70,9 +74,9 @@
 								console.log(e)
 								console.log(e.data.msg)
 								this.$data.vaccines = e.data.msg;
-								for(let i = 0;i<this.$data.vaccines.length;i++){
-									this.$data.vaccineTime[i] = this.$data.vaccines[i].orderDateP;
-								}
+								// for(let i = 0;i<this.$data.vaccines.length;i++){
+								// 	this.$data.vaccineTime[i] = this.$data.vaccines[i].orderDateP;
+								// }
 								console.log(this.$data.vaccineTime);
 							}
 				});
@@ -89,7 +93,44 @@
 			},
 			hospital: (e) => {
 				console.log(e);
-			}
+			},
+			change:function(e){
+				this.$data.message = e.detail;
+				console.log(e);
+			},
+			addAbnormal: function () {
+				const that = this;
+				const app = getApp().globalData;
+				console.log(that.$data.message);
+				if(app.openid == "" || app.userInfo.userIdCard == ""){
+					that.$data.mmmm = "请先进行登录以及身份证识别并且补全个人信息！"
+				}else if(that.$data.message == "" && that.$data.vaid == ""){
+					that.$data.mmmm = "请补全预约信息！"
+				}else{
+				
+				uni.request({
+					url: "https://health.ymhdev.xyz:9999/abnormal/add",
+					header: {
+						"content-type": "application/x-www-form-urlencoded"
+					},
+					method: "POST",
+					data: {
+						abnormalUserIdP: app.openid,
+						abnormalOrderIdP: that.$data.vaid,
+						abnormalInfoP: that.$data.message,
+						abnormalStatusP: 0
+					},
+					success:function(e){
+						console.log(e);
+						that.$data.mmmm = "上报成功！"
+					},
+					fail:function(e){
+						console.log(e);
+						that.$data.mmmm = "上报失败！"
+					}
+				});
+				}
+			},
 		}
 		
 	}

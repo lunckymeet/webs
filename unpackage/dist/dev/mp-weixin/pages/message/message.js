@@ -1,6 +1,6 @@
 (global["webpackJsonp"] = global["webpackJsonp"] || []).push([["pages/message/message"],{
 
-/***/ 115:
+/***/ 125:
 /*!********************************************************************************!*\
   !*** D:/software/HBuilder/health/main.js?{"page":"pages%2Fmessage%2Fmessage"} ***!
   \********************************************************************************/
@@ -222,5 +222,5 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ })
 
-},[[115,"common/runtime","common/vendor"]]]);
+},[[125,"common/runtime","common/vendor"]]]);
 //# sourceMappingURL=../../../.sourcemap/mp-weixin/pages/message/message.js.map

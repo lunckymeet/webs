@@ -1,6 +1,6 @@
 (global["webpackJsonp"] = global["webpackJsonp"] || []).push([["pages/vaccine/vaccine"],{
 
-/***/ 117:
+/***/ 127:
 /*!********************************************************************************!*\
   !*** D:/software/HBuilder/health/main.js?{"page":"pages%2Fvaccine%2Fvaccine"} ***!
   \********************************************************************************/
@@ -339,78 +339,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
 var _default =
 {
   data: function data() {
@@ -420,29 +348,9 @@ var _default =
       topContextHeight: 0, // 顶部内容高度
       data: null, // 疫情数据
       dates: [],
-      // operation: [
-      // 	{
-      // 		icon: "/static/images/vaccine/appointment.png",
-      // 		title: "预约",
-      // 		path: "/pages/subscribe/subscribe",
-      // 		thing: "skip()"
-      // 	},
-      // 	{
-      // 		icon: "/static/images/vaccine/scan.png",
-      // 		title: "扫一扫",
-      // 		path: "/pages/message/message",
-      // 		thing: "scanQrCode()"
-      // 	}
-      // ],
       scroll: 1,
-      steps: [
-      {
-        icon: "",
-        title: "预约中" },
-
-      {
-        icon: "",
-        title: "" }] };
+      name: ['预约', '等待接种', '接种中', '观察中', '异常上报', '接种完成'],
+      steps: [] };
 
 
 
@@ -485,18 +393,18 @@ var _default =
     this.$data.topContextHeight = this.$data.topHeight / app.globalData.rpxRatio - app.globalData.navHeight;
 
 
-    // uni.request({
-    // 	url: "https://interface.sina.cn/news/wap/fymap2020_data.d.json",
-    // 	method: "GET",
-    // 	timeout: 6000,
-    // 	success: (e) => {
-    // 		console.log("成功获取到疫情数据", e.data)
-    // 		that.$data.data = e.data.data;
-    // 	},
-    // 	fail: (e) => {
-    // 		console.log("获取到疫情数据失败", e)
-    // 	}
-    // })
+    uni.request({
+      url: "https://interface.sina.cn/news/wap/fymap2020_data.d.json",
+      method: "GET",
+      timeout: 6000,
+      success: function success(e) {
+        console.log("成功获取到疫情数据", e.data);
+        that.$data.data = e.data.data;
+      },
+      fail: function fail(e) {
+        console.log("获取到疫情数据失败", e);
+      } });
+
 
     uni.request({
       url: "https://health.ymhdev.xyz:9999/personO/select",
@@ -514,11 +422,14 @@ var _default =
         for (var i = 0; i < e.data.msg.length; i++) {
           if (e.data.msg[i].orderStatusP < 6) {
             console.log(e.data.msg[i]);
-            _this.$data.dates.push(e.data.msg[i]);
+            _this.$data.steps.push({
+              info: e.data.msg[i],
+              name: that.$data.name });
+
+
           }
         }
-
-        console.log(_this.$data.dates);
+        console.log(_this.$data.steps);
       } });
 
 
@@ -556,5 +467,5 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ })
 
-},[[117,"common/runtime","common/vendor"]]]);
+},[[127,"common/runtime","common/vendor"]]]);
 //# sourceMappingURL=../../../.sourcemap/mp-weixin/pages/vaccine/vaccine.js.map

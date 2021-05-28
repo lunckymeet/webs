@@ -3,25 +3,24 @@
 		<pagetop bg="#ffd943" title="个人中心" titleColor="#fff" :isPosition="false"></pagetop>
 		<view class="person-img">
 			<view class="person-top">
-				<view class="person-img-left" v-if="userInfo != null">
+				<view v-show="userInfo == null">
+					<button @click="getUserInfo" class="person-login">登录</button>
+				</view>
+				<view class="person-img-left" v-show="userInfo != null">
 					<van-image round width="5rem" height="5rem" fit="cover" :src="userInfo.userAvatar" />
 				</view>
-				<view class="person-img-right" v-if="userInfo != null">
-					<!-- <view class="person-name">姓名：{{name}}</view>
-					<view class="person-idcard">身份证号：{{idcard}}</view> -->
+				<view class="person-img-right" v-show="userInfo != null">
 					<view class="updateMessage" @click="skip($event)" data-path="/pages/updateMessage/updateMessage">
 						修改信息</view>
 				</view>
 
-				<view v-if="userInfo == null">
-					<button @click="getUserInfo" class="person-login">登录</button>
-				</view> 
+				
 			</view>
 			<view class="person-botton">
 				<van-cell is-link title="身份证识别" link-type="navigateTo" url="/pages/Identification/Identification" />
-				<van-cell is-link title="历史订单" link-type="navigateTo" url="/pages/order/order" />
+				<van-cell is-link title="历史接种疫苗" link-type="navigateTo" url="/pages/order/order" />
 
-				<van-cell is-link title="关于" link-type="navigateTo" url="/pages/dashboard/index" />
+				<van-cell is-link title="异常记录" link-type="navigateTo" url="/pages/about/about" />
 
 				<van-cell is-link title="倒计时" link-type="navigateTo" url="/pages/countdown/countdown" />
 
@@ -54,12 +53,16 @@
 			getUserInfo: function() {
 				let user = this.$data.userInfo;
 				const app = getApp();
-				console.log(app)
+				// setInterval(res => {
+				// 	console.log(user != null);
+				// }, 3000);
 				uni.getUserProfile({
 					desc: "获取用户信息",
 					success: function(e) {
 						user = e.userInfo;
+						
 						app.globalData.userInfo = e.userInfo;
+						console.log(user);
 						uni.request({
 							url: "https://health.ymhdev.xyz:9999/user/add",
 							method: "POST",
@@ -73,7 +76,8 @@
 								userSex: user.gender
 							},
 							success: (e) => {
-								console.log(e)
+								console.log(e);
+								
 							}
 						})
 					}
@@ -81,14 +85,12 @@
 			},
 			addUser: function() {
 				const user = this.$data.userInfo;
-				
-
 			}
 		},
 		created:function(){
 			const app = getApp();
 			this.$data.userInfo = app.globalData.userInfo;
-			console.log(app)
+			console.log(app);
 		}
 
 	}
@@ -118,7 +120,7 @@
 		width: 100%;
 		height: 80%;
 		padding-top: 5%;
-		padding-left: 37%;
+		padding-left: 39%;
 		/* float: left; */
 	}
 

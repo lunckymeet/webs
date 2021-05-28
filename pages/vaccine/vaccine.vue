@@ -5,12 +5,6 @@
 
 			<view class="vaccine-context" :style="'top: ' +　[navHeight]　+ 'px'">
 				<view class="vaccine-epidemic">
-					<!-- <scroll-view scroll-x class="bg-white padding response cu-steps steps-bottom" :scroll-into-view="'scroll-' + scroll"
-							 scroll-with-animation>
-								<view class="cu-item padding-lr-xl" :class="index>scroll?'':'text-blue'" v-for="(item,index) in 10" :key="index" :id="'scroll-' + index">
-									Level {{index + 1}} <text class="num" :data-index="index + 1"></text>
-								</view>
-							</scroll-view> -->
 					<swiper class="epidemic" :indicator-dots="true" :autoplay="true" :interval="6000" :duration="1000">
 						<swiper-item>
 							<view class="title">
@@ -29,6 +23,7 @@
 											{{data.gntotal}}
 										</view>
 										<view class="text data-change">
+											<text class="cuIcon-add"></text>
 											10
 										</view>
 									</view>
@@ -42,6 +37,7 @@
 											{{data.curetotal}}
 										</view>
 										<view class="text data-change">
+											<text class="cuIcon-add"></text>
 											8
 										</view>
 									</view>
@@ -55,6 +51,7 @@
 											{{data.deathtotal}}
 										</view>
 										<view class="text data-change">
+											<text class="cuIcon-add"></text>
 											1
 										</view>
 									</view>
@@ -68,6 +65,7 @@
 											{{data.econNum}}
 										</view>
 										<view class="text data-change">
+											<text class="cuIcon-add"></text>
 											4
 										</view>
 									</view>
@@ -105,6 +103,7 @@
 											{{data.curetotal+33}}
 										</view>
 										<view class="text data-change">
+											<text class="cuIcon-add"></text>
 											6809
 										</view>
 									</view>
@@ -118,6 +117,7 @@
 											{{data.deathtotal+34}}
 										</view>
 										<view class="text data-change">
+											<text class="cuIcon-add"></text>
 											5773
 										</view>
 									</view>
@@ -131,6 +131,7 @@
 											{{data.econNum+29}}
 										</view>
 										<view class="text data-change">
+											<text class="cuIcon-add"></text>
 											3769
 										</view>
 									</view>
@@ -181,96 +182,23 @@
 					
 				</view>
 
-				<view class="vaccine-steps" v-for="i in dates">
-					<scroll-view scroll-x class="bg-white steps response cu-steps steps-bottom" :scroll-into-view="'scroll-' + scroll"
+
+				<view class="vaccine-steps" v-for="i in steps">
+					<scroll-view scroll-x class="bg-white steps response cu-steps steps-bottom" :scroll-into-view="'scroll-' + i.info.orderStatusP"
 						scroll-with-animation>
-						<view class="vaccine-title">{{i.orderHospitalP}} {{i.vaccine.vaccineName}}</view>
-						<view class="cu-item padding-lr-xl" :class="index>scroll?'':'text-blue'" v-for="(item,index) in 6" :key="index" :id="'scroll-' + index">
-							<text :class="'cuIcon-homefill'"></text> 预约
+						<view class="vaccine-title">{{i.info.orderHospitalP}} {{i.info.vaccine.vaccineName}}</view>
+						<view class="cu-item padding-lr-xl" :class="index > i.info.orderStatusP ? '' : 'text-blue'" v-for="(item,index) in i.name" :key="index" :id="'scroll-' + index">
+							<text :class="'cuIcon-homefill'"></text>{{item}}
 						</view>
 					</scroll-view>
 				</view>
-				<view class="vaccine-info">
-					<view class="info">
-						<view class="title">
-							哈哈哈哈
-						</view>
-						
-						<view class="desc">
-							哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈
-						</view>
-						
-						<view class="introduce">
-							<view class="date">
-								<text class="cuIcon-timefill"></text>
-								2021-02-10
-							</view>
-							
-							<view class="from">
-								来源于中华新闻网
-							</view>
-							
-							<view class="eye">
-								<text class="cuIcon-attentionfavorfill"></text>1000
-							</view>
-						</view>
-					</view>
-					
-					
-					<view class="info">
-						<view class="title">
-							哈哈哈哈
-						</view>
-						
-						<view class="desc">
-							哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈
-						</view>
-						
-						<view class="introduce">
-							<view class="date">
-								<text class="cuIcon-timefill"></text>
-								2021-02-10
-							</view>
-							
-							<view class="from">
-								来源于中华新闻网
-							</view>
-							
-							<view class="eye">
-								<text class="cuIcon-attentionfavorfill"></text>1000
-							</view>
-						</view>
-					</view>
-					
-					
-					<view class="info">
-						<view class="title">
-							哈哈哈哈
-						</view>
-						
-						<view class="desc">
-							哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈
-						</view>
-						
-						<view class="introduce">
-							<view class="date">
-								<text class="cuIcon-timefill"></text>
-								2021-02-10
-							</view>
-							
-							<view class="from">
-								来源于中华新闻网
-							</view>
-							
-							<view class="eye">
-								<text class="cuIcon-attentionfavorfill"></text>1000
-							</view>
-						</view>
-					</view>
-					
-					
-					
+				<view class="vaccine-notice">
+					<van-cell-group>
+					  <van-cell title="阳光小区通知" label="5月20日我小区医务室送达200支疫苗,请居民先预约再进行接种,否则不予接待" :border="false" />
+					</van-cell-group>
 				</view>
+				
+				
 			</view>
 			
 		</view>
@@ -288,30 +216,10 @@
 				topContextHeight: 0, // 顶部内容高度
 				data: null, // 疫情数据
 				dates: [],
-				// operation: [
-				// 	{
-				// 		icon: "/static/images/vaccine/appointment.png",
-				// 		title: "预约",
-				// 		path: "/pages/subscribe/subscribe",
-				// 		thing: "skip()"
-				// 	},
-				// 	{
-				// 		icon: "/static/images/vaccine/scan.png",
-				// 		title: "扫一扫",
-				// 		path: "/pages/message/message",
-				// 		thing: "scanQrCode()"
-				// 	}
-				// ],
 				scroll: 1,
+				name:['预约','等待接种','接种中','观察中','异常上报','接种完成'],
 				steps: [
-					{
-						icon: "",
-						title: "预约中"
-					},
-					{
-						icon: "",
-						title: ""
-					}
+					
 				],
 			}
 		},
@@ -353,18 +261,18 @@
 			this.$data.topContextHeight = (this.$data.topHeight / app.globalData.rpxRatio) - app.globalData.navHeight;
 			
 			
-			// uni.request({
-			// 	url: "https://interface.sina.cn/news/wap/fymap2020_data.d.json",
-			// 	method: "GET",
-			// 	timeout: 6000,
-			// 	success: (e) => {
-			// 		console.log("成功获取到疫情数据", e.data)
-			// 		that.$data.data = e.data.data;
-			// 	},
-			// 	fail: (e) => {
-			// 		console.log("获取到疫情数据失败", e)
-			// 	}
-			// })
+			uni.request({
+				url: "https://interface.sina.cn/news/wap/fymap2020_data.d.json",
+				method: "GET",
+				timeout: 6000,
+				success: (e) => {
+					console.log("成功获取到疫情数据", e.data)
+					that.$data.data = e.data.data;
+				},
+				fail: (e) => {
+					console.log("获取到疫情数据失败", e)
+				}
+			})
 			
 			uni.request({
 						url: "https://health.ymhdev.xyz:9999/personO/select",
@@ -382,11 +290,14 @@
 							for(let i = 0;i < e.data.msg.length;i++){
 								if(e.data.msg[i].orderStatusP < 6){
 									console.log(e.data.msg[i]);
-									this.$data.dates.push(e.data.msg[i]);
+									this.$data.steps.push({
+										info:e.data.msg[i],
+										name:that.$data.name
+										
+									});
 								}
 							}
-							
-							console.log(this.$data.dates);
+							console.log(this.$data.steps);
 						}
 			})
 			
@@ -421,7 +332,8 @@
 	.vaccine-wrap > .vaccine-context > .vaccine-epidemic,
 	.vaccine-wrap > .vaccine-context > .vaccine-operation,
 	.vaccine-wrap > .vaccine-context > .vaccine-steps,
-	.vaccine-wrap > .vaccine-context > .vaccine-info{
+	.vaccine-wrap > .vaccine-context > .vaccine-info,
+	.vaccine-wrap > .vaccine-context > .vaccine-notice{
 		width: 94%;
 		margin: 5% auto;
 		background-color: #fff;
@@ -435,7 +347,7 @@
 	
 	/* 疫情样式 */
 	.vaccine-wrap > .vaccine-context > .vaccine-epidemic {
-		height: 500rpx;
+		height: 300rpx;
 		margin: 0 auto;
 	}
 	.vaccine-wrap > .vaccine-context > .vaccine-epidemic > .epidemic {
@@ -444,8 +356,8 @@
 	}
 	.vaccine-wrap > .vaccine-context > .vaccine-epidemic > .epidemic .title {
 		width: 100%;
-		height: 80rpx;
-		line-height: 60rpx;
+		height: 60rpx;
+		line-height: 52rpx;
 		text-align: center;
 		font-size: 32rpx;
 		font-weight: bold;
@@ -462,16 +374,17 @@
 	}
 	.vaccine-wrap > .vaccine-context > .vaccine-epidemic > .epidemic .data-list {
 		width: 100%;
-		height: 390rpx;
+		height: 200rpx;
 		background-color: rgba(0, 0, 0, 0);
 		display: flex;
 		flex-flow: row wrap;
 		padding: 5%;
 		box-sizing: border-box;
+		margin-top: 5%;
 	}
 	.vaccine-wrap > .vaccine-context > .vaccine-epidemic > .epidemic .data-list .data {
-		width: 50%;
-		height: 45%;
+		width: 25%;
+		height: 70%;
 		flex: 1 1 auto;
 		text-align: center;
 		display: flex;
@@ -482,16 +395,16 @@
 		font-weight: bolder;
 	}
 	.vaccine-wrap > .vaccine-context > .vaccine-epidemic > .epidemic .data-list .data .text {
-		margin: 6rpx 0;
+		margin: 4rpx 0;
 	}
 	.vaccine-wrap > .vaccine-context > .vaccine-epidemic > .epidemic .data-list .data:nth-child(2n+1){
-		border-right: 1px solid #ddd;
+		/* border-right: 1px solid #ddd; */
 		margin-bottom: 5%;
 	}
 	.vaccine-wrap > .vaccine-context > .vaccine-epidemic > .epidemic .data-list .data:nth-child(1),
-	.vaccine-wrap > .vaccine-context > .vaccine-epidemic > .epidemic .data-list .data:nth-child(2) {
-		/* margin-bottom: 5%;
-		border-bottom: 1px solid #ddd; */
+	.vaccine-wrap > .vaccine-context > .vaccine-epidemic > .epidemic .data-list .data:nth-child(3) {
+		/* border-right: 1px solid #ddd;
+		margin-bottom: 5%; */
 	}
 	.vaccine-wrap > .vaccine-context > .vaccine-epidemic > .epidemic .data-list .data:nth-child(1) .data-num,
 	.vaccine-wrap > .vaccine-context > .vaccine-epidemic > .epidemic .data-list .data:nth-child(1) .data-change{

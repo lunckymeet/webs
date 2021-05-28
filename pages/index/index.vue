@@ -52,15 +52,17 @@
 				]
 			}
 		},
-		onLoad() {
-
+		onLoad(e) {
+				console.log(e);
+			
 		},
 		methods: {
 			changepage: function(e) {
 				console.log(e.currentTarget.dataset.url);
 				this.path = e.currentTarget.dataset.url[0];
 			},
-		}
+		},
+		
 	}
 </script>
 

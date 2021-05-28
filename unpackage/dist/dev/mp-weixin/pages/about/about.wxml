@@ -1,1 +1,1 @@
-<view class="_div"></view>
+<view class="order-view data-v-92c79dbc"><navtop vue-id="1cea7424-1" topTitle="异常信息" class="data-v-92c79dbc" bind:__l="__l"></navtop><view class="order-detail data-v-92c79dbc"><block wx:for="{{nucleics}}" wx:for-item="i" wx:for-index="__i0__"><view class="order-vaccine data-v-92c79dbc"><view class="order-vaccine-time data-v-92c79dbc">{{i.orderDateP}}</view><view class="order-vaccine-place data-v-92c79dbc">{{i.orderHospitalP}}</view><view class="order-vaccine-end data-v-92c79dbc">{{scend}}</view></view></block></view></view>

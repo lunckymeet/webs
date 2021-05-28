@@ -1,21 +1,30 @@
 <template>
 	<view class="order-view">
-		<navtop topTitle="历史订单"></navtop>
+		<navtop topTitle="历史接种信息"></navtop>
 		<view class="order-detail">
 			<van-tabs swipeable>
 			  <van-tab title="疫苗">
 				  <view class="order-vaccine" v-for="i in vaccines">
-					  <view class="order-vaccine-time">{{i.orderDateP}}</view>
-					  <view class="order-vaccine-name">{{i.vaccine.vaccineName}}</view>
-					  <view class="order-vaccine-place">{{i.orderHospitalP}}</view>
+					  <view class="order-left">
+						  <van-image round width="3rem" height="3rem" fit="cover" src="/static/images/vaccine/order.png" />
+					  </view>
+					  <view class="order-right">
+						  <view class="order-vaccine-time">{{i.orderDateP}}</view>
+						  <view class="order-vaccine-name">{{i.vaccine.vaccineName}}</view>
+						  <view class="order-vaccine-place">{{i.orderHospitalP}}</view>
+					  </view>
 				  </view>
 			  </van-tab>
-			  
 			  <van-tab title="核酸检测">
 				  <view class="order-vaccine" v-for="i in nucleics">
-					  <view class="order-vaccine-time">{{i.orderDateP}}</view>
-					  <view class="order-vaccine-place">{{i.orderHospitalP}}</view>
-					  <view class="order-vaccine-end">{{scend}}</view>
+					  <view class="order-left">
+					  	  <van-image round width="3rem" height="3rem" fit="cover" src="/static/images/vaccine/order.png" />
+					  </view>
+					  <view class="order-right">
+						  <view class="order-vaccine-time">{{i.orderDateP}}</view>
+						  <view class="order-vaccine-place">{{i.orderHospitalP}}</view>
+						  <view class="order-vaccine-end">{{scend}}</view>
+					  </view>
 				  </view>
 			  </van-tab>
 			</van-tabs>
@@ -75,34 +84,7 @@
 				})
 			},
 		methods: {
-			getOrder: function() {
-				let user = this.$data.userInfo;
-				const app = getApp();
-				console.log(app)
-				uni.getUserProfile({
-					desc: "获取用户信息",
-					success: function(e) {
-						user = e.userInfo;
-						app.globalData.userInfo = e.userInfo;
-						uni.request({
-							url: "https://health.ymhdev.xyz:9999/user/add",
-							method: "POST",
-							header: {
-								"content-type": "application/x-www-form-urlencoded"
-							},
-							data: {
-								userOpenId: app.globalData.openid,
-								userAvatar: user.avatarUrl,
-								userNickName: user.nickName,
-								userSex: user.gender
-							},
-							success: (e) => {
-								console.log(e)
-							}
-						})
-					}
-				})
-			},
+			
 		}
 	}
 </script>
@@ -110,7 +92,7 @@
 <style scoped>
 	.order-vaccine{
 		width: 100%;
-		height: 150rpx;
+		height: 200rpx;
 		background-color: #FFFFFF;
 		border-top: #F0F0F0 solid 1rpx;
 		padding-left: 30rpx;
@@ -118,28 +100,46 @@
 		padding-right: 30rpx;
 	}
 	
+	.order-left{
+		width: 30%;
+		height: 80%;
+		margin-top: 6%;
+		margin-left: 2%;
+		border-radius: 50%;
+	}
+	
 	.order-vaccine-time{
-		font-size: 40rpx;
+		line-height: 50rpx;
+		font-size: 35rpx;
 		font-style: inherit;
+		/* color: #FEE083; */
+		margin-top: 3%;
 	}
 	
 	.order-vaccine-place{
-		font-size: 40rpx;
+		line-height: 65rpx;
+		font-size: 36rpx;
 		font-style: initial;
-		margin-left: 20rpx;
+		padding-left: 5%;
+		/* color: #01A3FE; */
+		/* margin-left: 20rpx; */
 	}
 	
 	.order-vaccine-name{
-		font-size: 40rpx;
+		font-size: 36rpx;
 		font-style: initial;
-		margin-left: 20rpx;
+		padding-left: 5%;
+		/* color: #01A3FE; */
+		/* margin-left: 20rpx; */
 	}
 	
 	.order-vaccine-end{
-		font-size: 40rpx;
+		font-size: 36rpx;
 		font-style: initial;
 		font-weight: 700;
 		margin-left: 20rpx;
+		padding-left: 5%;
+		/* color: #41A863; */
 	}
 	
 </style>

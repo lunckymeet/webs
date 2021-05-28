@@ -207,55 +207,35 @@
 				const that = this;
 				const app = getApp().globalData;
 				console.log(that.$data.personDate);
-				uni.request({
-					url: "https://health.ymhdev.xyz:9999/personO/add",
-					header: {
-						"content-type": "application/x-www-form-urlencoded"
-					},
-					method: "POST",
-					data: {
-						hospital: that.$data.personHospital,
-						date: that.$data.personDate,
-						vaccine: that.$data.vaccineid,
-						user: app.openid,
-						kind: 0
-					},
-					success:function(e){
-						console.log(e);
-						that.$data.message = "预约成功！"
-					},
-					fail:function(e){
-						console.log(e);
-						that.$data.message = "预约失败！"
-					}
-				});
-			},
-			addTeamOrder: function () {
-				const that = this;
-				const app = getApp().globalData;
-				console.log(that.$data.personDate);
-				uni.request({
-					url: "https://health.ymhdev.xyz:9999/personO/add",
-					header: {
-						"content-type": "application/x-www-form-urlencoded"
-					},
-					method: "POST",
-					data: {
-						hospital: that.$data.personHospital,
-						date: that.$data.personDate,
-						vaccine: that.$data.vaccineid,
-						user: app.openid,
-						kind: 0
-					},
-					success:function(e){
-						console.log(e);
-						that.$data.message = "预约成功！"
-					},
-					fail:function(e){
-						console.log(e);
-						that.$data.message = "预约失败！"
-					}
-				});
+				if(app.openid == "" || this.$data.personPhone == "" || this.$data.personAddress == "" || app.userInfo.userIdCard == ""){
+					that.$data.message = "请先进行登录以及身份证识别并且补全个人信息！"
+				}else if(this.$data.personHospital == "" || this.$data.personDate == "" || this.$data.vaccineid == ""){
+					that.$data.message = "请补全预约信息！"
+				}else{
+					uni.request({
+						url: "https://health.ymhdev.xyz:9999/personO/add",
+						header: {
+							"content-type": "application/x-www-form-urlencoded"
+						},
+						method: "POST",
+						data: {
+							hospital: that.$data.personHospital,
+							date: that.$data.personDate,
+							vaccine: that.$data.vaccineid,
+							user: app.openid,
+							kind: 0
+						},
+						success:function(e){
+							console.log(e);
+							that.$data.message = "预约成功！"
+						},
+						fail:function(e){
+							console.log(e);
+							that.$data.message = "预约失败！"
+						}
+					});
+				}
+				
 			},
 			PickerChange: (e) => {
 				this.index = e.detail.value

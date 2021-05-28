@@ -89,6 +89,9 @@
 					success:function(e){
 						console.log(e);
 						that.$data.message = "修改成功！"
+						app.userInfo.userName = that.$data.idInfo.name;
+						app.userInfo.userCensus = that.$data.idInfo.location;
+						app.userInfo.userIdCard = that.$data.idInfo.idNo;
 					},
 					fail:function(e){
 						console.log(e);

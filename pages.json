@@ -77,7 +77,9 @@
                 "enablePullDownRefresh": false,
 				"usingComponents": {
 					"van-icon": "/wxcomponents/vant/dist/icon/index",
-					"van-transition": "/wxcomponents/vant/dist/transition/index"
+					"van-transition": "/wxcomponents/vant/dist/transition/index",
+					"van-cell": "/wxcomponents/vant/dist/cell/index",
+					"van-cell-group": "/wxcomponents/vant/dist/cell-group/index"
 				}
             }
             
@@ -148,7 +150,8 @@
 				"usingComponents": {
 					 "van-tab": "/wxcomponents/vant/dist/tab/index",
 					 "van-tabs": "/wxcomponents/vant/dist/tabs/index",
-					 "van-card": "/wxcomponents/vant/dist/card/index"
+					 "van-card": "/wxcomponents/vant/dist/card/index",
+					 "van-image": "/wxcomponents/vant/dist/image/index"
 				}
 		    }
 		}
@@ -161,7 +164,9 @@
 		        "enablePullDownRefresh": false,
 				"usingComponents": {
 					 "van-count-down": "/wxcomponents/vant/dist/count-down/index",
-					 "van-button": "/wxcomponents/vant/dist/button/index"
+					 "van-button": "/wxcomponents/vant/dist/button/index",
+					 "van-grid": "/wxcomponents/vant/dist/grid/index",
+					 "van-grid-item": "/wxcomponents/vant/dist/grid-item/index"
 				}
 		    }
 		}
@@ -219,6 +224,7 @@
         }
     ],
 	"globalStyle": {
-		"navigationStyle": "custom"
+		"navigationStyle": "custom",
+		"enablePullDownRefresh": true
 	}
 }

@@ -126,6 +126,8 @@
 						console.log(e);
 						
 						that.$data.message = "修改成功！"
+						app.userInfo.userPhone = that.$data.phone;
+						app.userInfo.userAddress = that.$data.address;
 					},
 					fail:function(e){
 						console.log(e);
