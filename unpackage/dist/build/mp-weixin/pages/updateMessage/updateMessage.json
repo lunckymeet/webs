@@ -1,0 +1,9 @@
+{
+  "navigationBarTitleText": "",
+  "enablePullDownRefresh": false,
+  "usingComponents": {
+    "van-field": "/wxcomponents/vant/dist/field/index",
+    "van-toast": "/wxcomponents/vant/dist/toast/index",
+    "van-button": "/wxcomponents/vant/dist/button/index"
+  }
+}

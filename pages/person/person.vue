@@ -7,7 +7,7 @@
 					<button @click="getUserInfo" class="person-login">登录</button>
 				</view>
 				<view class="person-img-left" v-show="userInfo != null">
-					<van-image round width="5rem" height="5rem" fit="cover" :src="userInfo.userAvatar" />
+					<van-image round width="5rem" height="5rem" fit="cover" :src="userInfo.userAvatar == null ? userInfo.avatarUrl : ''" />
 				</view>
 				<view class="person-img-right" v-show="userInfo != null">
 					<view class="updateMessage" @click="skip($event)" data-path="/pages/updateMessage/updateMessage">
@@ -78,6 +78,14 @@
 							success: (e) => {
 								console.log(e);
 								
+								
+							}
+						});
+						
+						uni.navigateTo({
+							url: "../index/index?url=",
+							success:function(e){
+								console.log(e);
 							}
 						})
 					}

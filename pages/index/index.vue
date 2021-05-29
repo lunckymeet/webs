@@ -54,6 +54,7 @@
 		},
 		onLoad(e) {
 				console.log(e);
+				console.log(getApp().globalData.userInfo);
 			
 		},
 		methods: {

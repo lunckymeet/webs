@@ -1,0 +1,10 @@
+(global["webpackJsonp"]=global["webpackJsonp"]||[]).push([["pages/navTop/pageTop"],{"0561":function(t,n,a){"use strict";var e=a("dd74"),i=a.n(e);i.a},2990:function(t,n,a){"use strict";var e;a.d(n,"b",(function(){return i})),a.d(n,"c",(function(){return o})),a.d(n,"a",(function(){return e}));var i=function(){var t=this,n=t.$createElement;t._self._c},o=[]},"5c48":function(t,n,a){"use strict";a.r(n);var e=a("2990"),i=a("8894");for(var o in i)"default"!==o&&function(t){a.d(n,t,(function(){return i[t]}))}(o);a("0561");var u,r=a("f0c5"),c=Object(r["a"])(i["default"],e["b"],e["c"],!1,null,"510ad07c",null,!1,e["a"],u);n["default"]=c.exports},8894:function(t,n,a){"use strict";a.r(n);var e=a("a1a8"),i=a.n(e);for(var o in e)"default"!==o&&function(t){a.d(n,t,(function(){return e[t]}))}(o);n["default"]=i.a},a1a8:function(t,n,a){"use strict";(function(t){Object.defineProperty(n,"__esModule",{value:!0}),n.default=void 0;var e=i(a("aab3"));function i(t){return t&&t.__esModule?t:{default:t}}var o={data:function(){return{navHeight:0,statuHeight:0,city:""}},props:{bg:{type:String,default:""},title:{type:String,default:""},titleColor:{type:String,default:""},isPosition:{type:Boolean,default:!0},positionColor:{type:String,default:"#fff"}},methods:{position:function(n){t.navigateTo({url:"/pages/position/position"})}},created:function(t){var n=getApp().globalData,a=this.$data;if(a.navHeight=n.navHeight,a.statuHeight=n.statuHeight,this.isPosition){var i=new e.default.AMapWX({key:n.areaKey});i.getPoiAround({success:function(t){a.city=n.city=t.poisData[0].cityname},fail:function(t){console.log(t)}})}}};n.default=o}).call(this,a("543d")["default"])},dd74:function(t,n,a){}}]);
+;(global["webpackJsonp"] = global["webpackJsonp"] || []).push([
+    'pages/navTop/pageTop-create-component',
+    {
+        'pages/navTop/pageTop-create-component':(function(module, exports, __webpack_require__){
+            __webpack_require__('543d')['createComponent'](__webpack_require__("5c48"))
+        })
+    },
+    [['pages/navTop/pageTop-create-component']]
+]);

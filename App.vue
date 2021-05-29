@@ -14,7 +14,8 @@
 			userInfo: null, // 用户信息
 			city: "", // 当前城市
 			vaccine:[],//疫苗信息
-			taboo:[]//禁忌信息
+			taboo:[],//禁忌信息
+			order: null
 		},
 		methods: {
 			

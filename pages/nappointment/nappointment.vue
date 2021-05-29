@@ -110,6 +110,7 @@
 				vaccines:[],
 				personHospital: "", // 个人预约医院
 				personDate: null, // 个人预约时间
+				subDate: "",
 				minDate: new Date().getTime() + (60 * 60 * 2),
 				maxDate: new Date().getTime() + (60 * 60 * 24 * 1000 * 30),
 				currentDate: new Date().getTime(),
@@ -140,8 +141,8 @@
 					method: "POST",
 					data: {
 						hospital: that.$data.personHospital,
-						date: that.$data.personDate,
-						vaccine: that.$data.vaccineid,
+						date: that.$data.subDate,
+						vaccine: getApp().globalData.vaccine[0].vaccineId,
 						user: app.openid,
 						kind: 1
 					},
@@ -218,6 +219,7 @@
 				const minute = date.getMinutes() + "分";
 				
 				this.$data.personDate = year + month + day + hour + minute;
+				this.$data.subDate = e.detail;
 				console.log(e);
 			},
 			getName: function(e) {

@@ -1,0 +1,7 @@
+{
+  "navigationBarTitleText": "",
+  "enablePullDownRefresh": false,
+  "usingComponents": {
+    "van-icon": "/wxcomponents/vant/dist/icon/index"
+  }
+}

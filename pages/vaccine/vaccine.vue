@@ -287,6 +287,8 @@
 						success: (e) => {
 							console.log(e)
 							console.log(e.data)
+							getApp().globalData.order = e.data.msg;
+							console.log("aaaaaaaaaaaaaaaaaaaaa", getApp().globalData.order);
 							for(let i = 0;i < e.data.msg.length;i++){
 								if(e.data.msg[i].orderStatusP < 6){
 									console.log(e.data.msg[i]);

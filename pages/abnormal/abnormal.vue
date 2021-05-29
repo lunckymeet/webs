@@ -107,7 +107,7 @@
 				}else if(that.$data.message == "" && that.$data.vaid == ""){
 					that.$data.mmmm = "请补全预约信息！"
 				}else{
-				
+				console.log(getApp().globalData.order[0]);
 				uni.request({
 					url: "https://health.ymhdev.xyz:9999/abnormal/add",
 					header: {
@@ -116,7 +116,7 @@
 					method: "POST",
 					data: {
 						abnormalUserIdP: app.openid,
-						abnormalOrderIdP: that.$data.vaid,
+						abnormalOrderIdP: getApp().globalData.order[0].orderNoP,
 						abnormalInfoP: that.$data.message,
 						abnormalStatusP: 0
 					},

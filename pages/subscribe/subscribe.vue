@@ -190,6 +190,7 @@
 				vaccines:[],
 				personHospital: "", // 个人预约医院
 				personDate: null, // 个人预约时间
+				subDate: "",
 				minDate: new Date().getTime() + (60 * 60 * 2),
 				maxDate: new Date().getTime() + (60 * 60 * 24 * 1000 * 30),
 				currentDate: new Date().getTime(),
@@ -220,7 +221,7 @@
 						method: "POST",
 						data: {
 							hospital: that.$data.personHospital,
-							date: that.$data.personDate,
+							date: that.$data.subDate,
 							vaccine: that.$data.vaccineid,
 							user: app.openid,
 							kind: 0
@@ -291,6 +292,7 @@
 			},
 			closeDate: function(e) {
 				this.$data.dateShow = false;
+				console.log(e.detail);
 				const date = new Date(e.detail);
 				const year = date.getFullYear() + "年";
 				const month = (date.getMonth() + 1) + "月";
@@ -298,7 +300,10 @@
 				const hour = date.getHours() + "时";
 				const minute = date.getMinutes() + "分";
 				
+				// this.$data.subDate = date.getFullYear() + "-" + (date.getMonth() + 1) + "-" + date.getDay() + " " + date.getHours() + ":" + date.getMinutes() + ":" + date.getSeconds();
+				this.$data.subDate = e.detail;
 				this.$data.personDate = year + month + day + hour + minute;
+				console.log(this.$data.personDate);
 				console.log(e);
 			},
 			getName: function(e) {
