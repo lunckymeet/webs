@@ -47,5 +47,6 @@
     "about": "/pages/about/about",
     "navtop": "/pages/navTop/navTop",
     "pagetop": "/pages/navTop/pageTop"
-  }
+  },
+  "sitemapLocation": "sitemap.json"
 }
