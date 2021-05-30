@@ -1,0 +1,1 @@
+<view><view class="logo"><van-image vue-id="1bce42ba-1" round="{{true}}" width="5rem" height="5rem" fit="cover" src="/static/images/vaccine/logo.png" data-com-type="wx" bind:__l="__l"></van-image></view><view class="welcome">欢迎来到疫起打苗苗</view></view>

@@ -5409,6 +5409,9 @@ scroll-view.cu-steps .cu-item {
 	padding: 2% 2% 0 2%;
 	box-shadow: 0 0 20rpx #ddd;
 }
+.vaccine-wrap > .vaccine-context > .vaccine-notice.data-v-0804e272{
+	margin-bottom: 150rpx;
+}
 /* 疫情样式 */
 .vaccine-wrap > .vaccine-context > .vaccine-epidemic.data-v-0804e272 {
 	height: 300rpx;
@@ -5738,6 +5741,22 @@ scroll-view.cu-steps .cu-item {
 .tabs.data-v-1123b0b4{
 	line-width: 50%;
 }
+
+
+.welcome{
+	width: 100%;
+	height: 100rpx;
+	text-align: center;
+	margin-top: 200rpx;
+	font-size: 40rpx;
+}
+.logo{
+	width: 100%;
+	margin-top: 40%;
+	height: 10%;
+	padding-left: 39%;
+}
+
 
 
 .update-button.data-v-5dc3a944{

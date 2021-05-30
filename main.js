@@ -16,6 +16,10 @@ Vue.component("message", message);
 import nappointment from "./pages/nappointment/nappointment.vue";
 Vue.component("nappointment", nappointment);
 
+// 欢迎页
+import welcome from "./pages/welcome/welcome.vue";
+Vue.component("welcome", welcome);
+
 // 分类
 import classkind from "./pages/classkind/classkind.vue";
 Vue.component("classkind", classkind);

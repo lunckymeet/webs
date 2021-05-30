@@ -23,7 +23,7 @@
 				<van-cell is-link title="异常记录" link-type="navigateTo" url="/pages/about/about" />
 
 				<van-cell is-link title="倒计时" link-type="navigateTo" url="/pages/countdown/countdown" />
-
+				
 				<view class="feedback">
 					<button class='button' open-type="feedback">
 						反馈与建议
@@ -60,7 +60,6 @@
 					desc: "获取用户信息",
 					success: function(e) {
 						user = e.userInfo;
-						
 						app.globalData.userInfo = e.userInfo;
 						console.log(user);
 						uni.request({
@@ -73,12 +72,10 @@
 								userOpenId: app.globalData.openid,
 								userAvatar: user.avatarUrl,
 								userNickName: user.nickName,
-								userSex: user.gender
+								userSex: user.gender == 0? "1" : user.gender
 							},
 							success: (e) => {
 								console.log(e);
-								
-								
 							}
 						});
 						

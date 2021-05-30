@@ -2,26 +2,26 @@
 	<view>
 		<navtop topTitle="咨询"></navtop>
 		<view class="cu-chat">
-			<view class="cu-info">
+			<!-- <view class="cu-info">
 				欢迎咨询
-			</view>
+			</view> -->
 			<view class="cu-item self">
 				<view class="main">
 					<view class="content bg-green shadow messages-text">
-						
+						<text>欢迎咨询</text>
 					</view>
 				</view>
-				<view class="cu-avatar radius" style="background-image:url(https://ossweb-img.qq.com/images/lol/web201310/skin/big107000.jpg);"></view>
-				<view class="date">{{time}}</view>
+				<view class="cu-avatar radius" style="background-image:url(/static/images/vaccine/logo.png);"></view>
+				<view class="date"><!-- {{time}} --></view>
 			</view>
 			<view class="cu-item">
-				<view class="cu-avatar radius" style="background-image:url(https://ossweb-img.qq.com/images/lol/web201310/skin/big143004.jpg);"></view>
-				<view class="main-end">
+				<view class="cu-avatar radius" style="background-image:url(../../static/images/tabbar/syringe.png);"></view>
+				<view class="main">
 					<view class="content shadow">
-						<text>喵喵喵！喵喵喵！</text>
+						<text>昨晚吃了消炎药可以接种疫苗么</text>
 					</view>
 				</view>
-				<view class="date ">{{time}}</view>
+				<!-- <view class="date ">{{time}}</view> -->
 			</view>
 			{{message}}
 			<view class="cu-info round">咨询结束，请对本次咨询进行<text class="text-blue">评分</text></view>

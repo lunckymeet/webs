@@ -196,6 +196,12 @@
 					<van-cell-group>
 					  <van-cell title="阳光小区通知" label="5月20日我小区医务室送达200支疫苗,请居民先预约再进行接种,否则不予接待" :border="false" />
 					</van-cell-group>
+					<van-cell-group>
+					  <van-cell title="花园小区通知" label="小区疫苗暂时短缺,请居民耐心等待" :border="false" />
+					</van-cell-group>
+					<van-cell-group>
+					  <van-cell title="建设小区通知" label="疫苗正在接种,请居民及时接种疫苗" :border="false" />
+					</van-cell-group>
 				</view>
 				
 				
@@ -217,7 +223,7 @@
 				data: null, // 疫情数据
 				dates: [],
 				scroll: 1,
-				name:['预约','等待接种','接种中','观察中','异常上报','接种完成'],
+				name:['预约','等待接种','观察中','异常上报','接种完成'],
 				steps: [
 					
 				],
@@ -259,7 +265,7 @@
 			const that = this;
 			this.$data.navHeight = app.globalData.navHeight;
 			this.$data.topContextHeight = (this.$data.topHeight / app.globalData.rpxRatio) - app.globalData.navHeight;
-			
+			console.log("lll"+app.globalData.openid);
 			
 			uni.request({
 				url: "https://interface.sina.cn/news/wap/fymap2020_data.d.json",
@@ -274,36 +280,36 @@
 				}
 			})
 			
-			uni.request({
-						url: "https://health.ymhdev.xyz:9999/personO/select",
-						method: "GET",
-						header: {
-							"content-type": "application/x-www-form-urlencoded"
-						},
-						data: {
-							user: app.globalData.openid,
-							kind: "1"
-						},
-						success: (e) => {
-							console.log(e)
-							console.log(e.data)
-							getApp().globalData.order = e.data.msg;
-							console.log("aaaaaaaaaaaaaaaaaaaaa", getApp().globalData.order);
-							for(let i = 0;i < e.data.msg.length;i++){
-								if(e.data.msg[i].orderStatusP < 6){
-									console.log(e.data.msg[i]);
-									this.$data.steps.push({
-										info:e.data.msg[i],
-										name:that.$data.name
-										
-									});
+				uni.request({
+							url: "https://health.ymhdev.xyz:9999/personO/select",
+							method: "GET",
+							header: {
+								"content-type": "application/x-www-form-urlencoded"
+							},
+							data: {
+								user: app.globalData.openid,
+								kind: "0"
+							},
+							success: (e) => {
+								console.log(e)
+								console.log(e.data)
+								console.log(app.globalData.openid);
+								getApp().globalData.order = e.data.msg;
+								console.log("aaaaaaaaaaaaaaaaaaaaa", getApp().globalData.order);
+								for(let i = 0;i < e.data.msg.length;i++){
+									if(e.data.msg[i].orderStatusP < 5){
+										console.log(e.data.msg[i]);
+										this.$data.steps.push({
+											info:e.data.msg[i],
+											name:that.$data.name
+											
+										});
+									}
 								}
+								console.log(this.$data.steps);
 							}
-							console.log(this.$data.steps);
-						}
-			})
-			
-		}
+				})
+			}
 	}
 </script>
 
@@ -344,6 +350,10 @@
 		overflow: hidden;
 		padding: 2% 2% 0 2%;
 		box-shadow: 0 0 20rpx #ddd;
+	}
+	
+	.vaccine-wrap > .vaccine-context > .vaccine-notice{
+		margin-bottom: 150rpx;
 	}
 	
 	

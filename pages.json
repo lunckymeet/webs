@@ -1,6 +1,18 @@
 {
 	"pages": [ //pages数组中第一项表示应用启动页，参考：https://uniapp.dcloud.io/collocation/pages
 		{
+		    "path" : "pages/welcome/welcome",
+		    "style" :                                                                                    
+		    {
+		        "navigationBarTitleText": "",
+		        "enablePullDownRefresh": false,
+				"usingComponents": {
+					"van-image": "/wxcomponents/vant/dist/image/index"
+				}
+		    }
+		}
+		,
+		{
 			"path": "pages/index/index",
 			"style": {
 				"navigationBarTitleText": "uni-app",
@@ -222,6 +234,7 @@
             }
             
         }
+        
     ],
 	"globalStyle": {
 		"navigationStyle": "custom",

@@ -35,6 +35,9 @@
 	padding: 2% 2% 0 2%;
 	box-shadow: 0 0 20rpx #ddd;
 }
+.vaccine-wrap > .vaccine-context > .vaccine-notice.data-v-0804e272{
+	margin-bottom: 150rpx;
+}
 /* 疫情样式 */
 .vaccine-wrap > .vaccine-context > .vaccine-epidemic.data-v-0804e272 {
 	height: 300rpx;

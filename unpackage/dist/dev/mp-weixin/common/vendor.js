@@ -8079,9 +8079,9 @@ module.exports = g;
 /***/ }),
 
 /***/ 34:
-/*!**************************************************!*\
-  !*** E:/works/web/HBuilder/web/utils/amap-wx.js ***!
-  \**************************************************/
+/*!****************************************************!*\
+  !*** D:/software/HBuilder/health/utils/amap-wx.js ***!
+  \****************************************************/
 /*! no static exports found */
 /***/ (function(module, exports) {
 
@@ -8090,9 +8090,9 @@ function AMapWX(a) {this.key = a.key, this.requestConfig = { key: a.key, s: "rsx
 /***/ }),
 
 /***/ 4:
-/*!********************************************!*\
-  !*** E:/works/web/HBuilder/web/pages.json ***!
-  \********************************************/
+/*!**********************************************!*\
+  !*** D:/software/HBuilder/health/pages.json ***!
+  \**********************************************/
 /*! no static exports found */
 /***/ (function(module, exports) {
 
@@ -9091,9 +9091,9 @@ main();
 /***/ }),
 
 /***/ 54:
-/*!************************************************!*\
-  !*** E:/works/web/HBuilder/web/utils/utils.js ***!
-  \************************************************/
+/*!**************************************************!*\
+  !*** D:/software/HBuilder/health/utils/utils.js ***!
+  \**************************************************/
 /*! no static exports found */
 /***/ (function(module, exports) {
 
@@ -9127,14 +9127,14 @@ module.exports = {
 /*! exports provided: _from, _id, _inBundle, _integrity, _location, _phantomChildren, _requested, _requiredBy, _resolved, _shasum, _spec, _where, author, bugs, bundleDependencies, deprecated, description, devDependencies, files, gitHead, homepage, license, main, name, repository, scripts, version, default */
 /***/ (function(module) {
 
-module.exports = JSON.parse("{\"_from\":\"@dcloudio/uni-stat@next\",\"_id\":\"@dcloudio/uni-stat@2.0.0-31920210514002\",\"_inBundle\":false,\"_integrity\":\"sha512-hHyvtmMQDGCdzfS6O3ShhRkMtCapknAiZphv/xfwhilxETXZFUO2jrEalR0e3CqkwW7T3phTMAOxo0wyY5NjsQ==\",\"_location\":\"/@dcloudio/uni-stat\",\"_phantomChildren\":{},\"_requested\":{\"type\":\"tag\",\"registry\":true,\"raw\":\"@dcloudio/uni-stat@next\",\"name\":\"@dcloudio/uni-stat\",\"escapedName\":\"@dcloudio%2funi-stat\",\"scope\":\"@dcloudio\",\"rawSpec\":\"next\",\"saveSpec\":null,\"fetchSpec\":\"next\"},\"_requiredBy\":[\"#USER\",\"/\",\"/@dcloudio/vue-cli-plugin-uni\"],\"_resolved\":\"https://registry.npmjs.org/@dcloudio/uni-stat/-/uni-stat-2.0.0-31920210514002.tgz\",\"_shasum\":\"761406e2c24784359f02e5f8b6e1a6bf3ee42cc3\",\"_spec\":\"@dcloudio/uni-stat@next\",\"_where\":\"/Users/guoshengqiang/Documents/dcloud-plugins-new/release/uniapp-cli\",\"author\":\"\",\"bugs\":{\"url\":\"https://github.com/dcloudio/uni-app/issues\"},\"bundleDependencies\":false,\"deprecated\":false,\"description\":\"\",\"devDependencies\":{\"@babel/core\":\"^7.5.5\",\"@babel/preset-env\":\"^7.5.5\",\"eslint\":\"^6.1.0\",\"rollup\":\"^1.19.3\",\"rollup-plugin-babel\":\"^4.3.3\",\"rollup-plugin-clear\":\"^2.0.7\",\"rollup-plugin-commonjs\":\"^10.0.2\",\"rollup-plugin-copy\":\"^3.1.0\",\"rollup-plugin-eslint\":\"^7.0.0\",\"rollup-plugin-json\":\"^4.0.0\",\"rollup-plugin-node-resolve\":\"^5.2.0\",\"rollup-plugin-replace\":\"^2.2.0\",\"rollup-plugin-uglify\":\"^6.0.2\"},\"files\":[\"dist\",\"package.json\",\"LICENSE\"],\"gitHead\":\"c437ad9a231afa04b5ac0f48bfe5a6aef2936c52\",\"homepage\":\"https://github.com/dcloudio/uni-app#readme\",\"license\":\"Apache-2.0\",\"main\":\"dist/index.js\",\"name\":\"@dcloudio/uni-stat\",\"repository\":{\"type\":\"git\",\"url\":\"git+https://github.com/dcloudio/uni-app.git\",\"directory\":\"packages/uni-stat\"},\"scripts\":{\"build\":\"NODE_ENV=production rollup -c rollup.config.js\",\"dev\":\"NODE_ENV=development rollup -w -c rollup.config.js\"},\"version\":\"2.0.0-31920210514002\"}");
+module.exports = JSON.parse("{\"_from\":\"@dcloudio/uni-stat@next\",\"_id\":\"@dcloudio/uni-stat@2.0.0-31920210427001\",\"_inBundle\":false,\"_integrity\":\"sha512-45M5z4VUOBpLHbcJeeOE+piZ4tTnkcALy/7k+QPr2qWYxetNuSsfW+cENErL1HZDu83uex+HkiVawP/W2vavUw==\",\"_location\":\"/@dcloudio/uni-stat\",\"_phantomChildren\":{},\"_requested\":{\"type\":\"tag\",\"registry\":true,\"raw\":\"@dcloudio/uni-stat@next\",\"name\":\"@dcloudio/uni-stat\",\"escapedName\":\"@dcloudio%2funi-stat\",\"scope\":\"@dcloudio\",\"rawSpec\":\"next\",\"saveSpec\":null,\"fetchSpec\":\"next\"},\"_requiredBy\":[\"#USER\",\"/\",\"/@dcloudio/vue-cli-plugin-uni\"],\"_resolved\":\"https://registry.npmjs.org/@dcloudio/uni-stat/-/uni-stat-2.0.0-31920210427001.tgz\",\"_shasum\":\"86dc1d4965f220ef205c1dbfdd1926f9f5e0585a\",\"_spec\":\"@dcloudio/uni-stat@next\",\"_where\":\"/Users/guoshengqiang/Documents/dcloud-plugins-new/release/uniapp-cli\",\"author\":\"\",\"bugs\":{\"url\":\"https://github.com/dcloudio/uni-app/issues\"},\"bundleDependencies\":false,\"deprecated\":false,\"description\":\"\",\"devDependencies\":{\"@babel/core\":\"^7.5.5\",\"@babel/preset-env\":\"^7.5.5\",\"eslint\":\"^6.1.0\",\"rollup\":\"^1.19.3\",\"rollup-plugin-babel\":\"^4.3.3\",\"rollup-plugin-clear\":\"^2.0.7\",\"rollup-plugin-commonjs\":\"^10.0.2\",\"rollup-plugin-copy\":\"^3.1.0\",\"rollup-plugin-eslint\":\"^7.0.0\",\"rollup-plugin-json\":\"^4.0.0\",\"rollup-plugin-node-resolve\":\"^5.2.0\",\"rollup-plugin-replace\":\"^2.2.0\",\"rollup-plugin-uglify\":\"^6.0.2\"},\"files\":[\"dist\",\"package.json\",\"LICENSE\"],\"gitHead\":\"7d6b2ba93591e997c1f3254248375fe341719198\",\"homepage\":\"https://github.com/dcloudio/uni-app#readme\",\"license\":\"Apache-2.0\",\"main\":\"dist/index.js\",\"name\":\"@dcloudio/uni-stat\",\"repository\":{\"type\":\"git\",\"url\":\"git+https://github.com/dcloudio/uni-app.git\",\"directory\":\"packages/uni-stat\"},\"scripts\":{\"build\":\"NODE_ENV=production rollup -c rollup.config.js\",\"dev\":\"NODE_ENV=development rollup -w -c rollup.config.js\"},\"version\":\"2.0.0-31920210427001\"}");
 
 /***/ }),
 
 /***/ 7:
-/*!************************************************************!*\
-  !*** E:/works/web/HBuilder/web/pages.json?{"type":"stat"} ***!
-  \************************************************************/
+/*!**************************************************************!*\
+  !*** D:/software/HBuilder/health/pages.json?{"type":"stat"} ***!
+  \**************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -9144,14 +9144,14 @@ Object.defineProperty(exports, "__esModule", { value: true });exports.default = 
 /***/ }),
 
 /***/ 8:
-/*!*************************************************************!*\
-  !*** E:/works/web/HBuilder/web/pages.json?{"type":"style"} ***!
-  \*************************************************************/
+/*!***************************************************************!*\
+  !*** D:/software/HBuilder/health/pages.json?{"type":"style"} ***!
+  \***************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0;var _default = { "pages": { "pages/index/index": { "navigationBarTitleText": "uni-app" }, "pages/subscribe/subscribe": { "navigationBarTitleText": "", "enablePullDownRefresh": false }, "pages/nappointment/nappointment": { "navigationBarTitleText": "", "enablePullDownRefresh": false }, "pages/message/message": { "navigationBarTitleText": "", "enablePullDownRefresh": false }, "pages/consulting/consulting": { "navigationBarTitleText": "", "enablePullDownRefresh": false }, "pages/vaccine/vaccine": { "navigationBarTitleText": "", "enablePullDownRefresh": false }, "pages/person/person": { "navigationBarTitleText": "", "enablePullDownRefresh": false }, "pages/updateMessage/updateMessage": { "navigationBarTitleText": "", "enablePullDownRefresh": false }, "pages/abnormal/abnormal": { "navigationBarTitleText": "", "enablePullDownRefresh": false }, "pages/Identification/Identification": { "navigationBarTitleText": "", "enablePullDownRefresh": false }, "pages/order/order": { "navigationBarTitleText": "", "enablePullDownRefresh": false }, "pages/countdown/countdown": { "navigationBarTitleText": "", "enablePullDownRefresh": false }, "pages/about/about": { "navigationBarTitleText": "", "enablePullDownRefresh": false }, "pages/navTop/navTop": { "navigationBarTitleText": "", "enablePullDownRefresh": false }, "pages/classkind/classkind": { "navigationBarTitleText": "", "enablePullDownRefresh": false }, "pages/position/position": { "navigationBarTitleText": "", "enablePullDownRefresh": false }, "pages/scan/scan": { "navigationBarTitleText": "", "enablePullDownRefresh": false } }, "globalStyle": { "navigationStyle": "custom", "enablePullDownRefresh": true } };exports.default = _default;
+Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0;var _default = { "pages": { "pages/index/index": { "navigationBarTitleText": "uni-app", "usingComponents": {}, "usingAutoImportComponents": {} }, "pages/subscribe/subscribe": { "navigationBarTitleText": "", "enablePullDownRefresh": false, "usingComponents": {}, "usingAutoImportComponents": {} }, "pages/nappointment/nappointment": { "navigationBarTitleText": "", "enablePullDownRefresh": false, "usingComponents": {}, "usingAutoImportComponents": {} }, "pages/message/message": { "navigationBarTitleText": "", "enablePullDownRefresh": false, "usingComponents": {}, "usingAutoImportComponents": {} }, "pages/consulting/consulting": { "navigationBarTitleText": "", "enablePullDownRefresh": false, "usingComponents": {}, "usingAutoImportComponents": {} }, "pages/vaccine/vaccine": { "navigationBarTitleText": "", "enablePullDownRefresh": false, "usingComponents": {}, "usingAutoImportComponents": {} }, "pages/person/person": { "navigationBarTitleText": "", "enablePullDownRefresh": false, "usingComponents": {}, "usingAutoImportComponents": {} }, "pages/updateMessage/updateMessage": { "navigationBarTitleText": "", "enablePullDownRefresh": false, "usingComponents": {}, "usingAutoImportComponents": {} }, "pages/abnormal/abnormal": { "navigationBarTitleText": "", "enablePullDownRefresh": false, "usingComponents": {}, "usingAutoImportComponents": {} }, "pages/Identification/Identification": { "navigationBarTitleText": "", "enablePullDownRefresh": false, "usingComponents": {}, "usingAutoImportComponents": {} }, "pages/order/order": { "navigationBarTitleText": "", "enablePullDownRefresh": false, "usingComponents": {}, "usingAutoImportComponents": {} }, "pages/countdown/countdown": { "navigationBarTitleText": "", "enablePullDownRefresh": false, "usingComponents": {}, "usingAutoImportComponents": {} }, "pages/about/about": { "navigationBarTitleText": "", "enablePullDownRefresh": false, "usingComponents": {}, "usingAutoImportComponents": {} }, "pages/navTop/navTop": { "navigationBarTitleText": "", "enablePullDownRefresh": false, "usingComponents": {}, "usingAutoImportComponents": {} }, "pages/classkind/classkind": { "navigationBarTitleText": "", "enablePullDownRefresh": false, "usingComponents": {}, "usingAutoImportComponents": {} }, "pages/position/position": { "navigationBarTitleText": "", "enablePullDownRefresh": false, "usingComponents": {}, "usingAutoImportComponents": {} }, "pages/scan/scan": { "navigationBarTitleText": "", "enablePullDownRefresh": false, "usingComponents": {}, "usingAutoImportComponents": {} }, "pages/welcome/welcome": { "navigationBarTitleText": "", "enablePullDownRefresh": false, "usingComponents": {}, "usingAutoImportComponents": {} } }, "globalStyle": { "navigationStyle": "custom", "enablePullDownRefresh": true } };exports.default = _default;
 
 /***/ })
 

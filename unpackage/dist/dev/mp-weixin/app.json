@@ -1,5 +1,6 @@
 {
   "pages": [
+    "pages/welcome/welcome",
     "pages/index/index",
     "pages/subscribe/subscribe",
     "pages/nappointment/nappointment",
@@ -36,6 +37,7 @@
     "vaccine": "/pages/vaccine/vaccine",
     "message": "/pages/message/message",
     "nappointment": "/pages/nappointment/nappointment",
+    "welcome": "/pages/welcome/welcome",
     "classkind": "/pages/classkind/classkind",
     "update-message": "/pages/updateMessage/updateMessage",
     "consulting": "/pages/consulting/consulting",
@@ -47,6 +49,5 @@
     "about": "/pages/about/about",
     "navtop": "/pages/navTop/navTop",
     "pagetop": "/pages/navTop/pageTop"
-  },
-  "sitemapLocation": "sitemap.json"
+  }
 }
