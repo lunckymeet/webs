@@ -73,7 +73,7 @@
 								userOpenId: app.globalData.openid,
 								userAvatar: user.avatarUrl,
 								userNickName: user.nickName,
-								userSex: user.gender
+								userSex: user.gender == 0 ? "1": user.gender
 							},
 							success: (e) => {
 								console.log(e);
